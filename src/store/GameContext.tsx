@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { getChapter } from '@/data/storyData';
 
 type GameState = {
   currentChapter: number;
@@ -39,10 +40,29 @@ export function GameProvider({ children }: { children: ReactNode }) {
   };
 
   const progressToNextPage = () => {
-    setGameState(prev => ({
-      ...prev,
-      currentPage: prev.currentPage + 1
-    }));
+    setGameState(prev => {
+      const currentChapter = getChapter(prev.currentChapter);
+      // If we've reached the end of the current chapter's pages
+      if (currentChapter && prev.currentPage >= currentChapter.pages.length) {
+        // Check if there's a next chapter
+        const nextChapter = getChapter(prev.currentChapter + 1);
+        if (nextChapter) {
+          // Move to the next chapter, starting at page 1
+          return {
+            ...prev,
+            currentChapter: prev.currentChapter + 1,
+            currentPage: 1
+          };
+        }
+        // If no next chapter, stay on the last page
+        return prev;
+      }
+      // Otherwise, just move to the next page in the current chapter
+      return {
+        ...prev,
+        currentPage: prev.currentPage + 1
+      };
+    });
   };
 
   const resetGame = () => {

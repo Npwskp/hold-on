@@ -1,5 +1,6 @@
-import LandingPage from '@/components/landingPage';
-import Warning from '@/components/warning';
+import LandingPage from '@/components/chapter0/landingPage';
+import Warning from '@/components/chapter0/warning';
+import StoryPage1 from '@/components/chapter1/story_page_1';
 import { Chapter } from '../types/story';
 
 export const storyData: Chapter[] = [
@@ -19,7 +20,17 @@ export const storyData: Chapter[] = [
       },
     ]
   },
-  // Add more chapters...
+  {
+    id: 2,
+    title: "Chapter 1: Story",
+    pages: [
+      {
+        id: 1,
+        type: 'custom',
+        component: StoryPage1,
+      },
+    ]
+  },
 ];
 
 // Helper functions to manage story progression
