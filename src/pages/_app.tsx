@@ -1,17 +1,32 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { GameProvider, useGame } from '../store/GameContext';
 
-export default function App({ Component, pageProps }: AppProps) {
+// Wrapper component to access context
+function AppContent({ Component, ...props }: AppProps) {
+  const { currentChapter } = useGame();
+  
+  const title = currentChapter ? `รอก่อนนะ - Chapter ${currentChapter}` : 'รอก่อนนะ';
+
   return (
     <>
       <Head>
-        <title>รอก่อนนะ</title>
+        <title>{title}</title>
         <link rel="icon" href="/images/Main_Character.png" />
         <meta name="description" content="รอก่อนนะ" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Component {...pageProps} />
+      <Component {...props} />
     </>
+  );
+}
+
+// Main App component
+export default function App(props: AppProps) {
+  return (
+    <GameProvider>
+      <AppContent {...props} />
+    </GameProvider>
   );
 }

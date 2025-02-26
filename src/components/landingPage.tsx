@@ -2,9 +2,9 @@ import React from 'react'
 import { HiMenu } from 'react-icons/hi'
 import Image from 'next/image'
 
-import { Sarabun } from 'next/font/google';
+import { Mali } from 'next/font/google';
 
-const sarabun = Sarabun({
+const mali = Mali({
   subsets: ['thai', 'latin'], 
   weight: ['400', '700'], // Specify weights you need
 });
@@ -34,7 +34,7 @@ const LandingPage = () => {
         className="w-full max-w-[800px] aspect-[1/1.5] object-cover object-bottom"
         unoptimized
       />
-      <div className={`text-center text-white text-2xl md:text-4xl font-bold absolute bottom-[60px] md:bottom-[100px] w-full flex justify-center items-center ${sarabun.className}`}>
+      <div className={`text-center text-white text-2xl md:text-4xl font-bold absolute bottom-[60px] md:bottom-[100px] w-full flex justify-center items-center ${mali.className}`}>
         กดที่ใดก็ได้เพื่อเริ่มเกม
       </div>
     </div>
