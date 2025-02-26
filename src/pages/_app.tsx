@@ -5,9 +5,11 @@ import { GameProvider, useGame } from '../store/GameContext';
 
 // Wrapper component to access context
 function AppContent({ Component, ...props }: AppProps) {
-  const { currentChapter } = useGame();
+  const { gameState } = useGame();
   
-  const title = currentChapter ? `รอก่อนนะ - Chapter ${currentChapter}` : 'รอก่อนนะ';
+  const title = gameState.currentChapter 
+    ? `รอก่อนนะ - Chapter ${gameState.currentChapter - 1}` 
+    : 'รอก่อนนะ';
 
   return (
     <>

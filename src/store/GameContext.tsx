@@ -13,7 +13,6 @@ type GameContextType = {
   progressTo: (chapterId: number, pageId: number) => void;
   progressToNextPage: () => void;
   resetGame: () => void;
-  currentChapter: number | null;
 };
 
 const initialGameState: GameState = {
@@ -76,8 +75,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
         setGameState, 
         progressTo, 
         progressToNextPage,
-        resetGame,
-        currentChapter: null
+        resetGame
       }}
     >
       {children}
