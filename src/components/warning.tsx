@@ -11,7 +11,7 @@ const mali = Mali({
 const LandingPage = () => {
   return (
     <div
-      className="flex flex-col items-center justify-center min-h-[100dvh] w-full relative"
+      className="flex flex-col items-center justify-center w-full min-h-[100dvh]"
     >
       <Image
         src="/images/Warning.png"

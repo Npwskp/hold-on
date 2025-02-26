@@ -12,7 +12,7 @@ const mali = Mali({
 const LandingPage = () => {
   return (
     <div
-      className="flex flex-col items-center justify-between min-h-[100dvh] w-full relative"
+      className="flex flex-col items-center justify-between w-full min-h-[100dvh] relative"
     >
       <button className="absolute top-4 right-4 z-10">
         <HiMenu className="w-8 h-8 text-white" />

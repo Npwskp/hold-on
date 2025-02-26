@@ -2,7 +2,7 @@
   import { getPage, getChapter } from '../data/storyData';
 
 export default function StoryGame() {
-  const { gameState, progressToNextPage, resetGame } = useGame();
+  const { gameState, progressToNextPage } = useGame();
   const currentPage = getPage(gameState.currentChapter, gameState.currentPage);
   const currentChapter = getChapter(gameState.currentChapter);
 
@@ -19,8 +19,8 @@ export default function StoryGame() {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <div className="mb-6" onClick={() => progressToNextPage()}>
+    <div className="min-h-[100dvh] w-full ">
+      <div onClick={() => progressToNextPage()}>
         {renderPageContent()}
       </div>
     </div>
