@@ -9,6 +9,7 @@ export type StoryPage = {
   component?: React.ComponentType;
   backgroundImage?: string;
   characterImage?: string;
+  characterName?: string;
   isCharacterDialogue?: boolean;
 };
 
@@ -17,3 +18,8 @@ export type Chapter = {
   title: string;
   pages: StoryPage[];
 };
+
+export interface Story {
+  title: string;
+  content: string;
+}

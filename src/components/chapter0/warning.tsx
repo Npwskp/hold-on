@@ -20,7 +20,7 @@ const LandingPage = () => {
         height={500}
         className="max-md:w-[70dvw] max-md:h-[70dvw]"
       />
-      <div className={`text-center text-white text-md md:text-2xl font-bold  w-full flex flex-col justify-center items-center ${mali.className}`}>
+      <div className={`text-center text-white text-md md:text-2xl w-full flex flex-col justify-center items-center ${mali.className}`}>
         <p>เรื่องราวในเกมนี้เป็นเรื่องสมมุติ ตัวละคร เหตุการณ์</p>
         <p>และสถานที่ในเกมนี้ถูกสร้างขึ้นเพื่อความบันเทิง</p>
         <p>โปรดใช้วิจารณญาณในการเล่น</p>

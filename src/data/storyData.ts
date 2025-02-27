@@ -1,6 +1,7 @@
 import LandingPage from '@/components/chapter0/landingPage';
 import Warning from '@/components/chapter0/warning';
-import StoryPage1 from '@/components/chapter1/story_page_1';
+import StoryPage1 from '@/components/chapter1/storyPage1';
+import StoryPage2 from '@/components/chapter1/storyPage2';
 import { Chapter } from '../types/story';
 
 export const storyData: Chapter[] = [
@@ -28,6 +29,20 @@ export const storyData: Chapter[] = [
         id: 1,
         type: 'custom',
         component: StoryPage1,
+      },
+      {
+        id: 2,
+        type: 'custom',
+        component: StoryPage2,
+      },
+      {
+        id: 3,
+        type: 'dialogue',
+        text: "คุณกำลังดูหนังอยู่นะจ๊ะ",
+        backgroundImage: "/images/background/background1.jpg",
+        characterImage: "/images/character/character1.jpg",
+        characterName: "กิต",
+        isCharacterDialogue: true,
       },
     ]
   },
