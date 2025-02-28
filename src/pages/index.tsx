@@ -1,6 +1,6 @@
   import { useGame } from '../store/GameContext';
   import { getPage, getChapter } from '../data/storyData';
-
+  import DialogueTemplate from '../components/dialougeTemplate';
 export default function StoryGame() {
   const { gameState, progressToNextPage } = useGame();
   const currentPage = getPage(gameState.currentChapter, gameState.currentPage);
@@ -13,6 +13,8 @@ export default function StoryGame() {
       case 'custom':
         const CustomComponent = currentPage.component;
         return CustomComponent ? <CustomComponent /> : null;
+      case 'dialogue':
+        return <DialogueTemplate storyData={currentPage} />;
       default:
         return <p>{currentPage.text}</p>;
     }
