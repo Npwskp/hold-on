@@ -18,7 +18,8 @@ const DialogueTemplate: React.FC<DialogueTemplateProps> = ({ storyData }) => {
       style={{
         position: 'relative',
         minHeight: '100vh',
-        width: storyData.backgroundImage?.includes('SongkranScene') ? '100vw' : '540px',
+        width: storyData.backgroundImage?.includes('SongkranScene') ? '100vw' : '100%',
+        maxWidth: storyData.backgroundImage?.includes('SongkranScene') ? 'none' : '540px',
         aspectRatio: storyData.backgroundImage?.includes('SongkranScene') ? 'auto' : '16/9'
       }}
     >
