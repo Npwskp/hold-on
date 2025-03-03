@@ -11,6 +11,7 @@ export type StoryPage = {
   characterImage?: string;
   characterName?: string;
   isCharacterDialogue?: boolean;
+  isVideo?: boolean;
 };
 
 export type Chapter = {

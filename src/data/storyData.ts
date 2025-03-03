@@ -234,6 +234,42 @@ export const storyData: Chapter[] = [
         characterName: "ลิน",
         isCharacterDialogue: true
       },
+      {
+        id: 26,
+        type: 'dialogue',
+        text: "และในตอนนั้นเอง ผมก็เห็นร่างเล็กๆ พยายามกระโดดโบกมือออกมาจากฝูงชน",
+        backgroundImage: "/images/chapter1/CutScene2.mp4",
+        characterName: "กิต",
+        isCharacterDialogue: false,
+        isVideo: true
+      },
+      {
+        id: 27,
+        type: 'dialogue',
+        text: "ถึงจะนิสัยต่างกัน แต่ผมกับลินเป็นเพื่อน สนิทกันมาได้นานขนาดนี้",
+        backgroundImage: "/images/chapter1/CutScene2.mp4",
+        characterName: "กิต",
+        isCharacterDialogue: false,
+        isVideo: true
+      },
+      {
+        id: 28,
+        type: 'dialogue',
+        text: "การมีลินอยู่ในชีวิตถึงจะวุ่นวายไปซักหน่อย",
+        backgroundImage: "/images/chapter1/CutScene2.mp4",
+        characterName: "ลิน",
+        isCharacterDialogue: false,
+        isVideo: true
+      },
+      {
+        id: 29,
+        type: 'dialogue',
+        text: "แต่ลึกๆ ผมก็หวัง อยากให้ความสุขแบบนี้ คงอยู่ตลอดไป",
+        backgroundImage: "/images/chapter1/CutScene2.mp4",
+        characterName: "กิต",
+        isCharacterDialogue: false,
+        isVideo: true
+      },
     ]
   },
 ];

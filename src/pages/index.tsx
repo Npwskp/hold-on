@@ -21,7 +21,7 @@ export default function StoryGame() {
   };
 
   return (
-    <div className="min-h-[100dvh] w-full ">
+    <div className="min-h-[100dvh] w-full bg-black">
       <div onClick={() => progressToNextPage()}>
         {renderPageContent()}
       </div>

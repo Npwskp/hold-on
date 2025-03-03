@@ -24,13 +24,24 @@ const DialogueTemplate: React.FC<DialogueTemplateProps> = ({ storyData }) => {
       }}
     >
       {storyData.backgroundImage && (
-        <Image
-          src={storyData.backgroundImage}
-          alt="Background"
-          fill
-          priority={true}
-          className="object-cover z-0 absolute inset-0"
-        />
+        storyData.isVideo ? (
+          <video
+            src={storyData.backgroundImage}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="object-cover z-0 absolute inset-0 w-full h-full"
+          />
+        ) : (
+          <Image
+            src={storyData.backgroundImage}
+            alt="Background"
+            fill
+            priority={true}
+            className="object-cover z-0 absolute inset-0"
+          />
+        )
       )}
       {storyData.characterImage && (
         <Image 
@@ -50,7 +61,7 @@ const DialogueTemplate: React.FC<DialogueTemplateProps> = ({ storyData }) => {
               <h2 className="text-xl md:text-2xl">{storyData.characterName}</h2>
             </div>
           )}
-          <div className="text-black text-lg md:text-xl">
+          <div className={`text-black text-lg md:text-xl ${storyData.isCharacterDialogue ? '' : 'text-center'}`}>
             {storyData.text}
           </div>
         </div>
