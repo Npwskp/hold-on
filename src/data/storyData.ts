@@ -2,7 +2,8 @@ import LandingPage from '@/components/chapter0/landingPage';
 import Warning from '@/components/chapter0/warning';
 import StoryPage2 from '@/components/chapter1/storyPage2';
 import { Chapter } from '../types/story';
-
+import Fact1 from '@/components/chapter1/fact1';
+import EmergencyScene from '@/components/chapter2/emergencyScene';
 export const storyData: Chapter[] = [
   {
     id: 1,
@@ -462,8 +463,24 @@ export const storyData: Chapter[] = [
         type: 'middleText',
         text: "“รอก่อนนะ ไม่เป็นไร\nเดี๋ยวก็ถึงโรงพยาบาลแล้ว”",
       },
+      {
+        id: 54,
+        type: 'custom',
+        component: Fact1,
+      }
     ]
   },
+  {
+    id: 3,
+    title: "Chapter 2: Story",
+    pages: [
+      {
+        id: 1,
+        type: 'custom',
+        component: EmergencyScene,
+      }
+    ]
+  }
 ];
 
 // Helper functions to manage story progression
