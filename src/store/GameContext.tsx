@@ -12,6 +12,7 @@ type GameContextType = {
   setGameState: React.Dispatch<React.SetStateAction<GameState>>;
   progressTo: (chapterId: number, pageId: number) => void;
   progressToNextPage: () => void;
+  progressToPreviousPage: () => void;
   resetGame: () => void;
 };
 
@@ -64,6 +65,31 @@ export function GameProvider({ children }: { children: ReactNode }) {
     });
   };
 
+  const progressToPreviousPage = () => {
+    setGameState(prev => {
+      // If we're at the first page of a chapter
+      if (prev.currentPage <= 1) {
+        // Check if there's a previous chapter
+        const prevChapter = getChapter(prev.currentChapter - 1);
+        if (prevChapter) {
+          // Move to the last page of the previous chapter
+          return {
+            ...prev,
+            currentChapter: prev.currentChapter - 1,
+            currentPage: prevChapter.pages.length
+          };
+        }
+        // If no previous chapter, stay on the first page
+        return prev;
+      }
+      // Otherwise, just move to the previous page in the current chapter
+      return {
+        ...prev,
+        currentPage: prev.currentPage - 1
+      };
+    });
+  };
+
   const resetGame = () => {
     setGameState(initialGameState);
   };
@@ -75,6 +101,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
         setGameState, 
         progressTo, 
         progressToNextPage,
+        progressToPreviousPage,
         resetGame
       }}
     >

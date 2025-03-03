@@ -1,11 +1,26 @@
-  import { useGame } from '../store/GameContext';
-  import { getPage, getChapter } from '../data/storyData';
-  import DialogueTemplate from '../components/dialougeTemplate';
-  import MiddleTextTemplate from '../components/middleTextTemplate';
+import { useGame } from '../store/GameContext';
+import { getPage, getChapter } from '../data/storyData';
+import DialogueTemplate from '../components/dialougeTemplate';
+import MiddleTextTemplate from '../components/middleTextTemplate';
+import { useEffect } from 'react';
+
 export default function StoryGame() {
-  const { gameState, progressToNextPage } = useGame();
+  const { gameState, progressToNextPage, progressToPreviousPage } = useGame();
   const currentPage = getPage(gameState.currentChapter, gameState.currentPage);
   const currentChapter = getChapter(gameState.currentChapter);
+
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.key === 'ArrowRight') {
+        progressToNextPage();
+      } else if (event.key === 'ArrowLeft') {
+        progressToPreviousPage();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [progressToNextPage, progressToPreviousPage]);
 
   if (!currentPage || !currentChapter) return <div>Story not found</div>;
 
