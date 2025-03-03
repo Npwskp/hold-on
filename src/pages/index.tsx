@@ -1,6 +1,7 @@
   import { useGame } from '../store/GameContext';
   import { getPage, getChapter } from '../data/storyData';
   import DialogueTemplate from '../components/dialougeTemplate';
+  import MiddleTextTemplate from '../components/middleTextTemplate';
 export default function StoryGame() {
   const { gameState, progressToNextPage } = useGame();
   const currentPage = getPage(gameState.currentChapter, gameState.currentPage);
@@ -15,6 +16,8 @@ export default function StoryGame() {
         return CustomComponent ? <CustomComponent /> : null;
       case 'dialogue':
         return <DialogueTemplate storyData={currentPage} />;
+      case 'middleText':
+        return <MiddleTextTemplate storyData={currentPage} />;
       default:
         return <p>{currentPage.text}</p>;
     }

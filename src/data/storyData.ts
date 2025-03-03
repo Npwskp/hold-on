@@ -1,6 +1,5 @@
 import LandingPage from '@/components/chapter0/landingPage';
 import Warning from '@/components/chapter0/warning';
-import StoryPage1 from '@/components/chapter1/storyPage1';
 import StoryPage2 from '@/components/chapter1/storyPage2';
 import { Chapter } from '../types/story';
 
@@ -27,8 +26,8 @@ export const storyData: Chapter[] = [
     pages: [
       {
         id: 1,
-        type: 'custom',
-        component: StoryPage1,
+        type: 'middleText',
+        text: "เรื่องราวเกิดขึ้นในช่วงกลางเดือนเมษายน\nท่ามกลางเสียงหัวเราะและดนตรีดังกระหึ่ม",
       },
       {
         id: 2,
@@ -269,6 +268,199 @@ export const storyData: Chapter[] = [
         characterName: "กิต",
         isCharacterDialogue: false,
         isVideo: true
+      },
+      {
+        id: 30,
+        type: 'dialogue',
+        text: "ข้าวไข่เจียวป่าว!",
+        backgroundImage: "/images/chapter1/SongkranScene.png",
+        characterImage: "/images/chapter1/Lin1.png",
+        characterName: "ลิน",
+        isCharacterDialogue: true
+      },
+      {
+        id: 31,
+        type: 'dialogue',
+        text: "เสียงเล็กๆแว่วตามเสียงดนตรีเบสหนัก",
+        backgroundImage: "/images/chapter1/SongkranScene.png",
+        characterName: "ลิน",
+        isCharacterDialogue: false
+      },
+      {
+        id: 32,
+        type: 'dialogue',
+        text: "ฮะ?!",
+        backgroundImage: "/images/chapter1/SongkranScene.png",
+        characterImage: "/images/chapter1/Kit3.png",
+        characterName: "กิต",
+        isCharacterDialogue: true
+      },
+      {
+        id: 33,
+        type: 'dialogue',
+        text: "ตรงนี้เขาขายข้าวไข่เจียว! เอาป่าว",
+        backgroundImage: "/images/chapter1/SongkranScene.png",
+        characterImage: "/images/chapter1/Lin1.png",
+        characterName: "ลิน",
+        isCharacterDialogue: true
+      },
+      {
+        id: 34,
+        type: 'dialogue',
+        text: "ลินขยับปากและทำท่าทางประหลาด จากตรงนั้น เพื่อทำให้ผมเข้าใจ",
+        backgroundImage: "/images/chapter1/SongkranScene.png",
+        characterImage: "/images/chapter1/Lin1.png",
+        characterName: "ลิน",
+        isCharacterDialogue: false
+      },
+      {
+        id: 35,
+        type: 'dialogue',
+        text: "ไม่เอา! ออกมา!",
+        backgroundImage: "/images/chapter1/SongkranScene.png",
+        characterImage: "/images/chapter1/Kit4.png",
+        characterName: "กิต",
+        isCharacterDialogue: true
+      },
+      {
+        id: 36,
+        type: 'dialogue',
+        text: "ผมตะโกนบอก พร้อมทำท่าทางปฎิเสธ และกวักมือเรียกเธอออกมา",
+        backgroundImage: "/images/chapter1/SongkranScene.png",
+        characterImage: "/images/chapter1/Kit4.png",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 37,
+        type: 'dialogue',
+        text: "ลินพยักหน้าแล้วหันกลับไปยังกลุ่มฝูงชน",
+        backgroundImage: "/images/chapter1/SongkranScene.png",
+        characterImage: "/images/chapter1/Lin3.png",
+        characterName: "ลิน",
+        isCharacterDialogue: false
+      },
+      {
+        id: 38,
+        type: 'dialogue',
+        text: "และเมื่อวิเคราะห์จากประสบการณ์ที่ผ่านมาจากการเป็นเพื่อนกันเกิน10ปี",
+        backgroundImage: "/images/chapter1/SongkranScene.png",
+        characterImage: "/images/chapter1/Kit1.png",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 39,
+        type: 'dialogue',
+        text: "ไอ้นี่… ซื้อชัวร์",
+        backgroundImage: "/images/chapter1/SongkranScene.png",
+        characterImage: "/images/chapter1/Kit1.png",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 40,
+        type: 'dialogue',
+        text: "ใจจะซื้ออยู่แล้วจะหันมาถามทำไมวะ",
+        backgroundImage: "/images/chapter1/SongkranScene.png",
+        characterImage: "/images/chapter1/Kit4.png",
+        characterName: "กิต",
+        isCharacterDialogue: true
+      },
+      {
+        id: 41,
+        type: 'dialogue',
+        text: "ผมยืนรออยู่อีกฟากของถนนแบบเซ็งๆ ในขณะที่มองผู้คนที่ผ่านไปผ่านมา",
+        backgroundImage: "/images/chapter1/CutScene3.png",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 42,
+        type: 'dialogue',
+        text: "ลินพูดพร้อมตบที่ไหล่ของผมเบาๆก่อนจะหัวเราะออกมา",
+        backgroundImage: "/images/chapter1/CutScene3.png",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 43,
+        type: 'dialogue',
+        text: "จู่ๆก็มีลมวูบใหญ่พัดผ่านใบหน้าผมไปพร้อมเสียงดังสนั่น",
+        backgroundImage: "/images/chapter1/CutScene3.png",
+        characterName: "กิต",
+        isCharacterDialogue: true
+      },
+      {
+        id: 44,
+        type: 'middleText',
+        text: "เสียงดนตรีถูกกลบด้วยเสียงกรีดร้อง\nรอยยิ้มของผู้คนกลับเปลี่ยนเป็นสีหน้าตื่นตระหนก",
+      },
+      {
+        id: 45,
+        type: 'dialogue',
+        text: "ฝูงชนที่เคยมุงกันอยู่ตรงหน้าหายไป",
+        backgroundImage: "/images/chapter1/CutScene4.gif",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 46,
+        type: 'dialogue',
+        text: "เหลือเพียงรถกระบะคันใหญ่มาแทนที่",
+        backgroundImage: "/images/chapter1/CutScene4.gif",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 47,
+        type: 'dialogue',
+        text: "ทันใดนั้นโลกพลันเงียบสงัด เสียงวิ้ง\nในหูกลบเสียงเอะอะโวยวายรอบตัว",
+        backgroundImage: "/images/chapter1/CutScene4.gif",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 48,
+        type: 'dialogue',
+        text: "ลิน?",
+        backgroundImage: "/images/chapter1/CutScene4.gif",
+        characterName: "กิต",
+        isCharacterDialogue: true
+      },
+      {
+        id: 49,
+        type: 'dialogue',
+        text: "ไม่รู้นานเท่าไหร่ที่ผมยืนนิ่งอยู่ตรงนั้น ราวกับหุ่นไร้วิญญาณ",
+        backgroundImage: "/images/chapter1/CutScene4.gif",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 50,
+        type: 'dialogue',
+        text: "แต่ในที่สุดผมก็เริ่มรู้ตัว",
+        backgroundImage: "/images/chapter1/CutScene4.gif",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 51,
+        type: 'dialogue',
+        text: "ในตอนที่ได้กลิ่นของน้ำอบ",
+        backgroundImage: "/images/chapter1/CutScene4.gif",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 52,
+        type: 'middleText',
+        text: "ถูกปะปน ด้วยกลิ่นของคาวเลือด",
+      },
+      {
+        id: 53,
+        type: 'middleText',
+        text: "“รอก่อนนะ ไม่เป็นไร\nเดี๋ยวก็ถึงโรงพยาบาลแล้ว”",
       },
     ]
   },

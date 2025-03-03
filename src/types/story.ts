@@ -1,7 +1,7 @@
 export type StoryPage = {
   id: number;
   text?: string;
-  type: 'dialogue' | 'custom' | 'choice' | 'story';
+  type: 'dialogue' | 'custom' | 'choice' | 'middleText';
   choices?: {
     text: string;
     nextPageId: number;
