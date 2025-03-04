@@ -769,33 +769,38 @@ export const storyData: Chapter[] = [
       },
       {
         id: 4,
+        type: 'dialogue',
+        backgroundImage: "/images/chapter3/PhoneWithScene.png",
+      },
+      {
+        id: 5,
         type: 'choice',
         backgroundImage: "/images/chapter3/PhoneWithScene.png",
         choices: [
           {
             id: 1,
             text: "ติดต่อญาติของลินที่อาจจะมีเลือดกรุ๊ปตรงกันและมาช่วยได้",
-            nextPageId: 5
+            nextPageId: 6
           },
           {
             id: 2,
             text: "โพสต์ขอความช่วยเหลือผ่านโซเชียลมีเดีย",
-            nextPageId: 7
+            nextPageId: 8
           },
           {
             id: -1,
             text: "นั่งรอต่อไป ตามที่หมอบอก",
-            nextPageId: 9
+            nextPageId: 10
           }
         ]
       },
       {
-        id: 5,
+        id: 6,
         type: 'custom',
         component: Fact5
       },
       {
-        id: 6,
+        id: 7,
         type: 'dialogue',
         text: "ไม่ไหวแฮะ คุณหมอก็บอกแล้วด้วยว่าผู้บริจาคต้องสุขภาพแข็งแรง และเตรียมตัวมาอย่างดี ต่อให้มาได้จริงก็อาจบริจาคไม่ได้ แถมต้องผ่านขั้นตอนตรวจเลือดอีก",
         backgroundImage: "/images/chapter3/Hallway.png",
@@ -805,12 +810,12 @@ export const storyData: Chapter[] = [
         parentPageId: 4
       },
       {
-        id: 7,
+        id: 8,
         type: 'custom',
         component: Fact6
       },
       {
-        id: 8,
+        id: 9,
         type: 'dialogue',
         text: "ไม่ไหวแฮะ คุณหมอก็บอกแล้วด้วยว่าผู้บริจาคต้องสุขภาพแข็งแรง และเตรียมตัวมาอย่างดี ต่อให้มาได้จริงก็อาจบริจาคไม่ได้ แถมต้องผ่านขั้นตอนตรวจเลือดอีก",
         backgroundImage: "/images/chapter3/Hallway.png",
@@ -820,7 +825,7 @@ export const storyData: Chapter[] = [
         parentPageId: 4
       },
       {
-        id: 9,
+        id: 10,
         type: 'dialogue',
         text: "ผมตัดสินใจนั่งรอต่อไป เพราะรู้ว่าตัวเองคงทำอะไรไม่ได้จริงๆ",
         backgroundImage: "/images/chapter3/Hallway.png",
@@ -829,16 +834,8 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true
       },
       {
-        id: 10,
-        type: 'dialogue',
-        backgroundImage: "/images/chapter3/CutScene5.gif",
-        characterName: "กิต",
-        isCharacterDialogue: false
-      },
-      {
         id: 11,
         type: 'dialogue',
-        text: "ในระหว่างนั้นก็ได้เห็นกลุ่มคนข้างๆ นั่งลงร้องไห้หลังจากได้คุยกับคุณหมอ",
         backgroundImage: "/images/chapter3/CutScene5.gif",
         characterName: "กิต",
         isCharacterDialogue: false
@@ -846,7 +843,7 @@ export const storyData: Chapter[] = [
       {
         id: 12,
         type: 'dialogue',
-        text: "บรรยากาศโรงพยาบาลตอนนี้มีแต่ความสับสนวุ่นวาย และความโศกเศร้า",
+        text: "ในระหว่างนั้นก็ได้เห็นกลุ่มคนข้างๆ นั่งลงร้องไห้หลังจากได้คุยกับคุณหมอ",
         backgroundImage: "/images/chapter3/CutScene5.gif",
         characterName: "กิต",
         isCharacterDialogue: false
@@ -854,7 +851,7 @@ export const storyData: Chapter[] = [
       {
         id: 13,
         type: 'dialogue',
-        text: "ทุกภาพและเสียงรอบตัวมันกำลังทำให้ผมแทบเสียสติไปทุกที",
+        text: "บรรยากาศโรงพยาบาลตอนนี้มีแต่ความสับสนวุ่นวาย และความโศกเศร้า",
         backgroundImage: "/images/chapter3/CutScene5.gif",
         characterName: "กิต",
         isCharacterDialogue: false
@@ -862,31 +859,314 @@ export const storyData: Chapter[] = [
       {
         id: 14,
         type: 'dialogue',
-        text: "ผมปิดหูก้มหน้าหลับตาลง ไม่อยากรับรู้อะไรอีกแล้ว",
+        text: "ทุกภาพและเสียงรอบตัวมันกำลังทำให้ผมแทบเสียสติไปทุกที",
         backgroundImage: "/images/chapter3/CutScene5.gif",
         characterName: "กิต",
         isCharacterDialogue: false
       },
       {
         id: 15,
-        type: 'middleText',
-        text: "“ทำได้แค่รอเท่านั้น”",
+        type: 'dialogue',
+        text: "ผมปิดหูก้มหน้าหลับตาลง ไม่อยากรับรู้อะไรอีกแล้ว",
+        backgroundImage: "/images/chapter3/CutScene5.gif",
+        characterName: "กิต",
+        isCharacterDialogue: false
       },
       {
         id: 16,
         type: 'middleText',
-        text: "คำของคุณหมอยังคงก้องดังอยู่ในหัว",
+        text: "“ทำได้แค่รอเท่านั้น”",
       },
       {
         id: 17,
         type: 'middleText',
-        text: "ผมเกลียดการรอคอย\nเกลียดที่ตัวเองทำได้แค่นั้น",
+        text: "คำของคุณหมอยังคงก้องดังอยู่ในหัว",
       },
       {
         id: 18,
+        type: 'middleText',
+        text: "ผมเกลียดการรอคอย\nเกลียดที่ตัวเองทำได้แค่นั้น",
+      },
+      {
+        id: 19,
         type: 'custom',
         component: Fact7
       }
+    ]
+  },
+  {
+    id: 5,
+    title: "Chapter 4: Alternate",
+    pages: [
+      {
+        id: 1,
+        type: 'dialogue',
+        backgroundImage: "/images/chapter4/Roadway.png",
+        isCharacterDialogue: false
+      },
+      {
+        id: 2,
+        type: 'dialogue',
+        text: "รอด้วย! จะรีบเดินไปไหน",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Kit3-1.png",
+        characterName: "กิต",
+        isCharacterDialogue: true
+      },
+      {
+        id: 3,
+        type: 'dialogue',
+        text: "ผมพูดพร้อมนั่งลงพักหายใจ หลังจากตามหลังลินขึ้นเขามาได้ซักพัก",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Kit3-2.png",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 4,
+        type: 'dialogue',
+        text: "เธอเอาแต่ตื่นเต้นกับวิวรอบตัวจนวิ่งนำลืมผมไปแล้ว",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Kit3-2.png",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 5,
+        type: 'dialogue',
+        text: "ช้าเกินไปละ",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Lin2-1.png",
+        characterName: "ลิน",
+        isCharacterDialogue: true
+      },
+      {
+        id: 6,
+        type: 'dialogue',
+        text: "เธอวิ่งกลับมาหาผม",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Lin2-1.png",
+        characterName: "ลิน",
+        isCharacterDialogue: false
+      },
+      {
+        id: 7,
+        type: 'dialogue',
+        text: "สภาพแบบนี้แกคงไปไม่ถึงจุดชมวิวหรอก",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Lin2-1.png",
+        characterName: "ลิน",
+        isCharacterDialogue: true
+      },
+      {
+        id: 8,
+        type: 'dialogue',
+        text: "ผมมองลินที่กำลังจ่อกล้องวิดีโอมาที่หน้าของผม",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Lin2-1.png",
+        characterName: "ลิน",
+        isCharacterDialogue: false
+      },
+      {
+        id: 9,
+        type: 'dialogue',
+        text: "แล้วใครบอกว่าอยากจะมา",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Kit3-1.png",
+        characterName: "กิต",
+        isCharacterDialogue: true
+      },
+      {
+        id: 10,
+        type: 'dialogue',
+        text: "ฉัน",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Lin2-1.png",
+        characterName: "ลิน",
+        isCharacterDialogue: true
+      },
+      {
+        id: 11,
+        type: 'dialogue',
+        text: "ใช่",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Kit3-3.png",
+        characterName: "กิต",
+        isCharacterDialogue: true
+      },
+      {
+        id: 12,
+        type: 'dialogue',
+        text: "ผมปัดกล้องนั้นออก ก่อนจะลุกขึ้นมา",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Kit3-2.png",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 13,
+        type: 'dialogue',
+        text: "ก็แกสัญญาแล้วว่าจะมาด้วยกัน ฉันยอมให้แกเบี้ยวตั้งเป็นปีๆ",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Lin2-1.png",
+        characterName: "ลิน",
+        isCharacterDialogue: true
+      },
+      {
+        id: 14,
+        type: 'dialogue',
+        text: "เลิกบ่นแล้วรีบเดินได้แล้ว! เดี๋ยวไม่ทันพระอาทิตย์ขึ้นหรอก",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Lin2-1.png",
+        characterName: "ลิน",
+        isCharacterDialogue: true
+      },
+      {
+        id: 15,
+        type: 'dialogue',
+        text: "ลินพูด ก่อนจะออกเดินนำไปอีกครั้ง",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Lin2-1.png",
+        characterName: "ลิน",
+        isCharacterDialogue: false
+      },
+      {
+        id: 16,
+        type: 'dialogue',
+        text: "ไม่ทันก็รอมาพรุ่งนี้ก็ได้ เต็นท์ก็อยู่แค่นี้",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Kit3-1.png",
+        characterName: "กิต",
+        isCharacterDialogue: true
+      },
+      {
+        id: 17,
+        type: 'dialogue',
+        text: "ไม่!",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Lin2-1.png",
+        characterName: "ลิน",
+        isCharacterDialogue: true
+      },
+      {
+        id: 18,
+        type: 'dialogue',
+        text: "เธอหันมาพูดด้วยน้ำเสียงหนักแน่น",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Lin2-1.png",
+        characterName: "ลิน",
+        isCharacterDialogue: false
+      },
+      {
+        id: 19,
+        type: 'dialogue',
+        text: "ตั้งใจจะมาวันนี้ ก็ต้องวันนี้แหละ",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Lin2-1.png",
+        characterName: "ลิน",
+        isCharacterDialogue: true
+      },
+      {
+        id: 20,
+        type: 'dialogue',
+        text: "ครับๆ",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterImage: "/images/chapter4/Kit3-3.png",
+        characterName: "กิต",
+        isCharacterDialogue: true
+      },
+      {
+        id: 21,
+        type: 'dialogue',
+        text: "ผมออกก้าวเดินตามเธอไปอีกครั้ง",
+        backgroundImage: "/images/chapter4/RoadwayBlur.png",
+        characterName: "กิต",
+      },
+      {
+        id: 22,
+        type: 'dialogue',
+        backgroundImage: "/images/chapter4/Mountain.png",
+      },
+      {
+        id: 23,
+        type: 'dialogue',
+        text: "เรามาถึงจุดชมวิวได้เร็วกว่าที่คิด ทำให้ต้องมานั่งรอเวลาที่พระอาทิตย์ขึ้นอีกหลายชั่วโมง",
+        backgroundImage: "/images/chapter4/MountainBlur.png",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 24,
+        type: 'dialogue',
+        text: "เห็นมั้ย รีบมาก็เท่านั้น ต้องมานั่งรออยู่ดี",
+        backgroundImage: "/images/chapter4/MountainBlur.png",
+        characterImage: "/images/chapter4/Kit3-1.png",
+        characterName: "กิต",
+        isCharacterDialogue: true
+      },
+      {
+        id: 25,
+        type: 'dialogue',
+        text: "รอนิดรอหน่อยทำบ่น",
+        backgroundImage: "/images/chapter4/MountainBlur.png",
+        characterImage: "/images/chapter4/Lin2-1.png",
+        characterName: "ลิน",
+        isCharacterDialogue: true
+      },
+      {
+        id: 26,
+        type: 'dialogue',
+        text: "ลินพูดด้วยน้ำเสียงประชดประชัน",
+        backgroundImage: "/images/chapter4/MountainBlur.png",
+        characterImage: "/images/chapter4/Lin2-1.png",
+        characterName: "ลิน",
+        isCharacterDialogue: false
+      },
+      {
+        id: 27,
+        type: 'dialogue',
+        text: "ทีฉันรอแกมาเป็นปีๆกว่าจะได้มาที่นี่ด้วยกัน ฉันยังไม่บ่นเลย",
+        backgroundImage: "/images/chapter4/MountainBlur.png",
+        characterImage: "/images/chapter4/Lin2-1.png",
+        characterName: "ลิน",
+        isCharacterDialogue: true
+      },
+      {
+        id: 28,
+        type: 'dialogue',
+        text: "คิดซะว่ารอบนี้สลับกัน แกเป็นฝ่ายรอเพื่อฉันบ้าง",
+        backgroundImage: "/images/chapter4/MountainBlur.png",
+        characterImage: "/images/chapter4/Lin2-1.png",
+        characterName: "ลิน",
+        isCharacterDialogue: true
+      },
+      {
+        id: 29,
+        type: 'dialogue',
+        text: "เออๆ โอเค",
+        backgroundImage: "/images/chapter4/MountainBlur.png",
+        characterImage: "/images/chapter4/Kit3-4.png",
+        characterName: "กิต",
+        isCharacterDialogue: true
+      },
+      {
+        id: 30,
+        type: 'dialogue',
+        text: "ผมหัวเราะพร้อมยกมือยอมแพ้ ผมก็บิดมันมาหลายครั้งจริงๆ",
+        backgroundImage: "/images/chapter4/MountainBlur.png",
+        characterImage: "/images/chapter4/Kit3-4.png",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 31,
+        type: 'dialogue',
+        text: "แถมเถียงไปก็ไม่เคยชนะซักครั้งเลยด้วย",
+        backgroundImage: "/images/chapter4/MountainBlur.png",
+        characterImage: "/images/chapter4/Kit3-4.png",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
     ]
   }
 ];
@@ -899,4 +1179,4 @@ export const getPage = (chapterId: number, pageId: number) => {
 
 export const getChapter = (chapterId: number) => {
   return storyData.find(c => c.id === chapterId);
-}; 
+};
