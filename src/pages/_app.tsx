@@ -8,7 +8,7 @@ function AppContent({ Component, ...props }: AppProps) {
   const { gameState } = useGame();
   
   const title = gameState.currentChapter 
-    ? `รอก่อนนะ - Chapter ${gameState.currentChapter - 1}` 
+    ? `รอก่อนนะ - ${gameState.currentTitle}` 
     : 'รอก่อนนะ';
 
   return (

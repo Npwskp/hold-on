@@ -4,6 +4,7 @@ import { getChapter } from '@/data/storyData';
 type GameState = {
   currentChapter: number;
   currentPage: number;
+  currentTitle: string;
   completedChapters: number[];
   selectedChoice: number[];
 };
@@ -22,6 +23,7 @@ type GameContextType = {
 const initialGameState: GameState = {
   currentChapter: 1,
   currentPage: 1,
+  currentTitle: "Chapter 0: Intro",
   completedChapters: [],
   selectedChoice: [],
 };
@@ -36,6 +38,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
       ...prev,
       currentChapter: chapterId,
       currentPage: pageId,
+      currentTitle: getChapter(chapterId)?.title || "",
       completedChapters: 
         !prev.completedChapters.includes(chapterId) 
           ? [...prev.completedChapters, chapterId]
@@ -55,7 +58,8 @@ export function GameProvider({ children }: { children: ReactNode }) {
           return {
             ...prev,
             currentChapter: prev.currentChapter + 1,
-            currentPage: 1
+            currentPage: 1,
+            currentTitle: nextChapter.title
           };
         }
         // If no next chapter, stay on the last page
@@ -80,7 +84,8 @@ export function GameProvider({ children }: { children: ReactNode }) {
           return {
             ...prev,
             currentChapter: prev.currentChapter - 1,
-            currentPage: prevChapter.pages.length
+            currentPage: prevChapter.pages.length,
+            currentTitle: prevChapter.title
           };
         }
         // If no previous chapter, stay on the first page

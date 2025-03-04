@@ -738,7 +738,7 @@ export const storyData: Chapter[] = [
   },
   {
     id: 4,
-    title: "Chapter 3: That's all we can do",
+    title: "Chapter 2: That's all we can do",
     pages: [
       {
         id: 1,
