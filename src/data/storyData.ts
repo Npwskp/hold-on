@@ -7,6 +7,10 @@ import EmergencyScene from '@/components/chapter2/emergencyScene';
 import Fact2 from '@/components/chapter2/fact2';
 import Fact3 from '@/components/chapter2/fact3';
 import Fact4 from '@/components/chapter2/fact4';
+import Fact5 from '@/components/chapter3/fact5';
+import Fact6 from '@/components/chapter3/fact6';
+import Fact7 from '@/components/chapter3/fact7';
+
 export const storyData: Chapter[] = [
   {
     id: 1,
@@ -762,6 +766,126 @@ export const storyData: Chapter[] = [
         characterImage: "/images/chapter3/Kit2-1.png",
         characterName: "กิต",
         isCharacterDialogue: true
+      },
+      {
+        id: 4,
+        type: 'choice',
+        backgroundImage: "/images/chapter3/PhoneWithScene.png",
+        choices: [
+          {
+            id: 1,
+            text: "ติดต่อญาติของลินที่อาจจะมีเลือดกรุ๊ปตรงกันและมาช่วยได้",
+            nextPageId: 5
+          },
+          {
+            id: 2,
+            text: "โพสต์ขอความช่วยเหลือผ่านโซเชียลมีเดีย",
+            nextPageId: 7
+          },
+          {
+            id: -1,
+            text: "นั่งรอต่อไป ตามที่หมอบอก",
+            nextPageId: 9
+          }
+        ]
+      },
+      {
+        id: 5,
+        type: 'custom',
+        component: Fact5
+      },
+      {
+        id: 6,
+        type: 'dialogue',
+        text: "ไม่ไหวแฮะ คุณหมอก็บอกแล้วด้วยว่าผู้บริจาคต้องสุขภาพแข็งแรง และเตรียมตัวมาอย่างดี ต่อให้มาได้จริงก็อาจบริจาคไม่ได้ แถมต้องผ่านขั้นตอนตรวจเลือดอีก",
+        backgroundImage: "/images/chapter3/Hallway.png",
+        characterImage: "/images/chapter3/Kit2-2.png",
+        characterName: "กิต",
+        isCharacterDialogue: true,
+        parentPageId: 4
+      },
+      {
+        id: 7,
+        type: 'custom',
+        component: Fact6
+      },
+      {
+        id: 8,
+        type: 'dialogue',
+        text: "ไม่ไหวแฮะ คุณหมอก็บอกแล้วด้วยว่าผู้บริจาคต้องสุขภาพแข็งแรง และเตรียมตัวมาอย่างดี ต่อให้มาได้จริงก็อาจบริจาคไม่ได้ แถมต้องผ่านขั้นตอนตรวจเลือดอีก",
+        backgroundImage: "/images/chapter3/Hallway.png",
+        characterImage: "/images/chapter3/Kit2-2.png",
+        characterName: "กิต",
+        isCharacterDialogue: true,
+        parentPageId: 4
+      },
+      {
+        id: 9,
+        type: 'dialogue',
+        text: "ผมตัดสินใจนั่งรอต่อไป เพราะรู้ว่าตัวเองคงทำอะไรไม่ได้จริงๆ",
+        backgroundImage: "/images/chapter3/Hallway.png",
+        characterImage: "/images/chapter3/Kit2-3.png",
+        characterName: "กิต",
+        isCharacterDialogue: true
+      },
+      {
+        id: 10,
+        type: 'dialogue',
+        backgroundImage: "/images/chapter3/CutScene5.gif",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 11,
+        type: 'dialogue',
+        text: "ในระหว่างนั้นก็ได้เห็นกลุ่มคนข้างๆ นั่งลงร้องไห้หลังจากได้คุยกับคุณหมอ",
+        backgroundImage: "/images/chapter3/CutScene5.gif",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 12,
+        type: 'dialogue',
+        text: "บรรยากาศโรงพยาบาลตอนนี้มีแต่ความสับสนวุ่นวาย และความโศกเศร้า",
+        backgroundImage: "/images/chapter3/CutScene5.gif",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 13,
+        type: 'dialogue',
+        text: "ทุกภาพและเสียงรอบตัวมันกำลังทำให้ผมแทบเสียสติไปทุกที",
+        backgroundImage: "/images/chapter3/CutScene5.gif",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 14,
+        type: 'dialogue',
+        text: "ผมปิดหูก้มหน้าหลับตาลง ไม่อยากรับรู้อะไรอีกแล้ว",
+        backgroundImage: "/images/chapter3/CutScene5.gif",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 15,
+        type: 'middleText',
+        text: "“ทำได้แค่รอเท่านั้น”",
+      },
+      {
+        id: 16,
+        type: 'middleText',
+        text: "คำของคุณหมอยังคงก้องดังอยู่ในหัว",
+      },
+      {
+        id: 17,
+        type: 'middleText',
+        text: "ผมเกลียดการรอคอย\nเกลียดที่ตัวเองทำได้แค่นั้น",
+      },
+      {
+        id: 18,
+        type: 'custom',
+        component: Fact7
       }
     ]
   }

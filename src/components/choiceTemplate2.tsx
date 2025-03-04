@@ -16,23 +16,20 @@ interface ChoiceTemplate2Props {
 }
 const ChoiceTemplate2: React.FC<ChoiceTemplate2Props> = ({ storyData, onChoiceSelect, selectedChoice, selectChoice, clearSelectedChoice }) => {
   return (
-    <div 
-      className="choice-container flex flex-col items-center justify-end mx-auto"
-      style={{
-        position: 'relative',
-        minHeight: '100vh',
-        width: '100%',
-        maxWidth: '540px',
-        aspectRatio: '16/9'
-      }}
-    >
+    <div className="relative w-full h-screen max-w-[540px] mx-auto">
+      {/* Background image container */}
+      <div className="absolute inset-0">
         <img
-            src={"/images/chapter3/PhoneWithScene.png"}
-            alt="Background"
-            className="object-cover z-0 absolute inset-0 w-full h-full"
+          src={storyData.backgroundImage}
+          alt="Background"
+          className="w-full h-full object-cover"
         />
-      <div className={`flex flex-col justify-center p-8 md:p-14 relative mb-[5vh] w-[85vw] md:w-[640px] aspect-[21/8] bg-white/90 rounded-lg ${mali.className} z-20`}>
-        <div className="flex flex-col gap-4 mt-4">
+      </div>
+
+      {/* Phone screen content container */}
+      <div className="absolute left-[54%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-[40%] md:w-[35%] flex flex-col justify-center">
+        {/* Choices container */}
+        <div className={`${mali.className} flex flex-col gap-[8vh] w-full px-4 md:px-3`}>
           {storyData.choices?.map((choice, index) => (
             <button
               key={index}
@@ -45,7 +42,7 @@ const ChoiceTemplate2: React.FC<ChoiceTemplate2Props> = ({ storyData, onChoiceSe
                 }
               }}
               disabled={selectedChoice.includes(choice.nextPageId)}
-              className={`w-full p-4 text-white rounded-lg transition-colors duration-200 text-lg md:text-xl ${
+              className={`w-full py-2 px-3 text-white rounded-lg transition-colors duration-200 text-[11px] md:text-xs leading-tight ${
                 selectedChoice.includes(choice.nextPageId)
                   ? 'bg-black/40 cursor-not-allowed'
                   : 'bg-black/90 hover:bg-black/80'

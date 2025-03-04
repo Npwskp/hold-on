@@ -4,6 +4,7 @@ import DialogueTemplate from '../components/dialougeTemplate';
 import MiddleTextTemplate from '../components/middleTextTemplate';
 import ChoiceTemplate from '../components/choiceTemplate';
 import { useEffect } from 'react';
+import ChoiceTemplate2 from '@/components/choiceTemplate2';
 
 export default function StoryGame() {
   const { gameState, progressToNextPage, progressToPreviousPage, progressTo, selectChoice, clearSelectedChoice } = useGame();
@@ -39,6 +40,15 @@ export default function StoryGame() {
       case 'middleText':
         return <MiddleTextTemplate storyData={currentPage} />;
       case 'choice':
+        if (gameState.currentChapter === 4) {
+          return <ChoiceTemplate2
+            storyData={currentPage}
+            onChoiceSelect={handleChoiceSelect}
+            selectedChoice={gameState.selectedChoice}
+            selectChoice={selectChoice}
+            clearSelectedChoice={clearSelectedChoice}
+          />;
+        }
         return <ChoiceTemplate
           storyData={currentPage}
           onChoiceSelect={handleChoiceSelect}
