@@ -2,18 +2,19 @@ import { useGame } from '../store/GameContext';
 import { getPage, getChapter } from '../data/storyData';
 import DialogueTemplate from '../components/dialougeTemplate';
 import MiddleTextTemplate from '../components/middleTextTemplate';
+import ChoiceTemplate from '../components/choiceTemplate';
 import { useEffect } from 'react';
 
 export default function StoryGame() {
-  const { gameState, progressToNextPage, progressToPreviousPage } = useGame();
+  const { gameState, progressToNextPage, progressToPreviousPage, progressTo, selectChoice, clearSelectedChoice } = useGame();
   const currentPage = getPage(gameState.currentChapter, gameState.currentPage);
   const currentChapter = getChapter(gameState.currentChapter);
 
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
-      if (event.key === 'ArrowRight') {
+      if (event.key === 'ArrowRight' && currentPage?.type !== 'choice') {
         progressToNextPage();
-      } else if (event.key === 'ArrowLeft') {
+      } else if (event.key === 'ArrowLeft' && currentPage?.type !== 'choice') {
         progressToPreviousPage();
       }
     };
@@ -24,6 +25,10 @@ export default function StoryGame() {
 
   if (!currentPage || !currentChapter) return <div>Story not found</div>;
 
+  const handleChoiceSelect = (nextPageId: number) => {
+    progressTo(gameState.currentChapter, nextPageId);
+  };
+
   const renderPageContent = () => {
     switch (currentPage.type) {
       case 'custom':
@@ -33,6 +38,14 @@ export default function StoryGame() {
         return <DialogueTemplate storyData={currentPage} />;
       case 'middleText':
         return <MiddleTextTemplate storyData={currentPage} />;
+      case 'choice':
+        return <ChoiceTemplate
+          storyData={currentPage}
+          onChoiceSelect={handleChoiceSelect}
+          selectedChoice={gameState.selectedChoice}
+          selectChoice={selectChoice}
+          clearSelectedChoice={clearSelectedChoice}
+        />;
       default:
         return <p>{currentPage.text}</p>;
     }
@@ -40,9 +53,18 @@ export default function StoryGame() {
 
   return (
     <div className="min-h-[100dvh] w-full bg-black">
-      <div onClick={() => progressToNextPage()}>
-        {renderPageContent()}
-      </div>
+      {currentPage.type !== 'choice' && (
+        <div onClick={() => {
+          if (currentPage.parentPageId) {
+            progressTo(gameState.currentChapter, currentPage.parentPageId);
+          } else {
+            progressToNextPage();
+          }
+        }}>
+          {renderPageContent()}
+        </div>
+      )}
+      {currentPage.type === 'choice' && renderPageContent()}
     </div>
   );
 }

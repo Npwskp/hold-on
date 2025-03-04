@@ -5,6 +5,7 @@ type GameState = {
   currentChapter: number;
   currentPage: number;
   completedChapters: number[];
+  selectedChoice: number[];
 };
 
 type GameContextType = {
@@ -14,12 +15,15 @@ type GameContextType = {
   progressToNextPage: () => void;
   progressToPreviousPage: () => void;
   resetGame: () => void;
+  selectChoice: (choiceId: number) => void;
+  clearSelectedChoice: () => void;
 };
 
 const initialGameState: GameState = {
   currentChapter: 1,
   currentPage: 1,
   completedChapters: [],
+  selectedChoice: [],
 };
 
 const GameContext = createContext<GameContextType | undefined>(undefined);
@@ -90,6 +94,20 @@ export function GameProvider({ children }: { children: ReactNode }) {
     });
   };
 
+  const selectChoice = (choiceId: number) => {
+    setGameState(prev => ({
+      ...prev,
+      selectedChoice: [...prev.selectedChoice, choiceId]
+    }));
+  };
+
+  const clearSelectedChoice = () => {
+    setGameState(prev => ({
+      ...prev,
+      selectedChoice: []
+    }));
+  };
+
   const resetGame = () => {
     setGameState(initialGameState);
   };
@@ -102,7 +120,9 @@ export function GameProvider({ children }: { children: ReactNode }) {
         progressTo, 
         progressToNextPage,
         progressToPreviousPage,
-        resetGame
+        resetGame,
+        selectChoice,
+        clearSelectedChoice
       }}
     >
       {children}

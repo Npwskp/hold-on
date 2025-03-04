@@ -3,6 +3,7 @@ export type StoryPage = {
   text?: string;
   type: 'dialogue' | 'custom' | 'choice' | 'middleText';
   choices?: {
+    id: number;
     text: string;
     nextPageId: number;
   }[];
@@ -12,6 +13,8 @@ export type StoryPage = {
   characterName?: string;
   isCharacterDialogue?: boolean;
   isVideo?: boolean;
+  parentPageId?: number;
+  choicesId?: number;
 };
 
 export type Chapter = {

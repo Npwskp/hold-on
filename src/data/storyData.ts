@@ -4,6 +4,9 @@ import StoryPage2 from '@/components/chapter1/storyPage2';
 import { Chapter } from '../types/story';
 import Fact1 from '@/components/chapter1/fact1';
 import EmergencyScene from '@/components/chapter2/emergencyScene';
+import Fact2 from '@/components/chapter2/fact2';
+import Fact3 from '@/components/chapter2/fact3';
+import Fact4 from '@/components/chapter2/fact4';
 export const storyData: Chapter[] = [
   {
     id: 1,
@@ -566,6 +569,167 @@ export const storyData: Chapter[] = [
         characterName: "คุณหมอ",
         isCharacterDialogue: true
       },
+      {
+        id: 12,
+        type: 'choice',
+        text: "ผมจะทำอย่างไรดี...",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        choices: [
+          {
+            id: 1,
+            text: "เอาเลือดของผมไปก่อนไม่ได้หรอครับ",
+            nextPageId: 13
+          },
+          {
+            id: 2,
+            text: "คนจะตายอยู่แล้วจะให้มารอได้ยังไง!",
+            nextPageId: 17
+          },
+          {
+            id: -1,
+            text: "เข้าใจแล้วครับ",
+            nextPageId: 23
+          }
+        ]
+      },
+      {
+        id: 13,
+        type: 'dialogue',
+        text: "ผมจำได้ว่าผมเลือดกรุ๊ป O เหมือนลิน เอาเลือดของผมไปไม่ได้หรอครับ",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Kit3.png",
+        characterName: "กิต",
+        isCharacterDialogue: true,
+      },
+      {
+        id: 14,
+        type: 'dialogue',
+        text: "ขอโทษด้วยจริงๆ ครับ เลือดที่จะนำมารักษาผู้ป่วยจะต้องได้รับการตรวจคัดกรองจากห้องแล็บก่อน ",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Doctor4.png",
+        characterName: "คุณหมอ",
+        isCharacterDialogue: true,
+      },
+      {
+        id: 15,
+        type: 'dialogue',
+        text: "แล้วจากประวัติผู้ป่วย กรุ๊ปเลือดเธอเป็น O- ต้องรับเลือดกรุ๊ป O- เหมือนกันเท่านั้นครับ",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Doctor4.png",
+        characterName: "คุณหมอ",
+        isCharacterDialogue: true,
+      },
+      {
+        id: 16,
+        type: 'custom',
+        component: Fact2,
+        parentPageId: 12,
+      },
+      {
+        id: 17,
+        type: 'dialogue',
+        text: "คนจะตายอยู่ตรงหน้าหมอจะมาบอกให้ผมรอเนี่ยนะ!",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Kit5.png",
+        characterName: "กิต",
+        isCharacterDialogue: true,
+      },
+      {
+        id: 18,
+        type: 'dialogue',
+        text: "ผมขึ้นเสียง ทั้งๆที่รู้ว่าไม่ควรทำ",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Kit5.png",
+        characterName: "กิต",
+        isCharacterDialogue: false,
+      },
+      {
+        id: 19,
+        type: 'dialogue',
+        text: "ขอโทษด้วยจริงๆครับ",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Doctor4.png",
+        characterName: "คุณหมอ",
+        isCharacterDialogue: true,
+      },
+      {
+        id: 20,
+        type: 'dialogue',
+        text: "สีหน้าของคุณหมอยังคงสุขุมและเรียบเฉย",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Doctor7.png",
+        characterName: "คุณหมอ",
+        isCharacterDialogue: false,
+      },
+      {
+        id: 21,
+        type: 'dialogue',
+        text: "ปกติช่วงสงกรานต์แบบนี้ เลือดในคลังเรามีไม่พอใช้อยู่แล้ว ยิ่งกับอุบัติเหตุใหญ่กระทันหันแบบนี้อีก",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Doctor6.png",
+        characterName: "คุณหมอ",
+        isCharacterDialogue: true,
+      },
+      {
+        id: 22,
+        type: 'custom',
+        component: Fact3,
+        parentPageId: 12,
+      },
+      {
+        id: 23,
+        type: 'dialogue',
+        text: "เข้าใจแล้วครับ",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Kit6.png",
+        characterName: "กิต",
+        isCharacterDialogue: true,
+      },
+      {
+        id: 24,
+        type: 'dialogue',
+        text: "ผมเข้าใจว่าคุณกำลังร้อนใจ ผมเองก็เสียใจที่ต้องบอกว่าเราทำได้แค่รอ",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Doctor4.png",
+        characterName: "คุณหมอ",
+        isCharacterDialogue: true,
+      },
+      {
+        id: 25,
+        type: 'dialogue',
+        text: "แต่ไม่ว่ายังไงทางโรงพยาบาลสัญญาว่าจะดูแลเธอให้ถึงที่สุดครับ",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Doctor4.png",
+        characterName: "คุณหมอ",
+        isCharacterDialogue: true,
+      },
+      {
+        id: 26,
+        type: 'dialogue',
+        text: "เขาพูดทิ้งท้ายก่อนขอตัวไปทำงานต่อ",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Doctor7.png",
+        characterName: "คุณหมอ",
+        isCharacterDialogue: false,
+      },
+      {
+        id: 27,
+        type: 'dialogue',
+        text: "ผมเดินกลับไปนั่งเก้าอี้หน้าห้องฉุกเฉินที่ตอนนี้เต็มไปด้วยญาติคนเจ็บคนอื่นๆกำลังนั่งรออย่างสิ้นหวัง",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 28,
+        type: 'middleText',
+        text: "“รอก่อนนะ\nมันจะต้องมีทางอื่นๆที่ช่วยได้แน่”",
+      },
+      {
+        id: 29,
+        type: 'custom',
+        component: Fact4
+      }
     ]
   }
 ];
