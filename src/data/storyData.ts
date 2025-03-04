@@ -26,7 +26,7 @@ export const storyData: Chapter[] = [
   },
   {
     id: 2,
-    title: "Chapter 1: Story",
+    title: "Chapter 0: Intro",
     pages: [
       {
         id: 1,
@@ -475,7 +475,7 @@ export const storyData: Chapter[] = [
   },
   {
     id: 3,
-    title: "Chapter 2: Story",
+    title: "Chapter 1: Take a moment",
     pages: [
       {
         id: 1,
@@ -729,6 +729,39 @@ export const storyData: Chapter[] = [
         id: 29,
         type: 'custom',
         component: Fact4
+      }
+    ]
+  },
+  {
+    id: 4,
+    title: "Chapter 3: That's all we can do",
+    pages: [
+      {
+        id: 1,
+        type: 'dialogue',
+        text: "ผมเกลียดการรอคอย เกลียดที่ตัวเองทำได้แค่นั้น",
+        backgroundImage: "/images/chapter3/Hallway.png",
+        characterImage: "/images/chapter3/Kit2-1.png",
+        characterName: "กิต",
+        isCharacterDialogue: true
+      },
+      {
+        id: 2,
+        type: 'dialogue',
+        text: "ในระหว่างที่นั่งรอนี้ ผมพยายามคิดว่าจะช่วยอะไรได้บ้าง",
+        backgroundImage: "/images/chapter3/Hallway.png",
+        characterImage: "/images/chapter3/Kit2-1.png",
+        characterName: "กิต",
+        isCharacterDialogue: true
+      },
+      {
+        id: 3,
+        type: 'dialogue',
+        text: "ถ้าเป็นคนอื่นที่ตกอยู่ในสถานการณ์แบบนี้เขาจะทำอะไรกันนะ",
+        backgroundImage: "/images/chapter3/Hallway.png",
+        characterImage: "/images/chapter3/Kit2-1.png",
+        characterName: "กิต",
+        isCharacterDialogue: true
       }
     ]
   }

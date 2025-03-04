@@ -11,6 +11,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'gray-custom': 'rgb(151, 151, 151)',
       },
       fontFamily: {
         sans: ['var(--font-sans)'],

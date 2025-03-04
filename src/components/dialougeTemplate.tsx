@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Mali } from 'next/font/google'
 interface DialogueTemplateProps {
   storyData: StoryPage
+  chapterId: number
 }
 
 const mali = Mali({
@@ -11,7 +12,7 @@ const mali = Mali({
   weight: ['400', '700'],
 })
 
-const DialogueTemplate: React.FC<DialogueTemplateProps> = ({ storyData }) => {
+const DialogueTemplate: React.FC<DialogueTemplateProps> = ({ storyData, chapterId }) => {
   return (
     <div 
       className={`dialogue-container flex flex-col items-center justify-end mx-auto`}
@@ -55,13 +56,13 @@ const DialogueTemplate: React.FC<DialogueTemplateProps> = ({ storyData }) => {
       )}
       
       {storyData.text && (
-        <div className={`flex flex-col justify-center p-8 md:p-14 relative mb-[5vh] w-[85vw] md:w-[640px] aspect-[21/8] bg-white/90 rounded-lg ${mali.className} z-20`}>
+        <div className={`flex flex-col justify-center p-8 md:p-14 relative mb-[5vh] w-[85vw] md:w-[640px] aspect-[21/8] ${chapterId == 4 ? 'bg-gray-custom/90' : 'bg-white/90'} rounded-lg ${mali.className} z-20`}>
           {storyData.isCharacterDialogue && (
-            <div className="absolute -top-8 md:-top-10 left-[5%] bg-black/90 w-[30%] md:w-[150px] aspect-[20/9] rounded-xl flex justify-center items-center">
+            <div className="absolute -top-8 md:-top-10 left-[5%] bg-black/90 w-[30%] md:w-[150px] aspect-[20/9] rounded-xl flex justify-center items-center z-30">
               <h2 className="text-xl md:text-2xl">{storyData.characterName}</h2>
             </div>
           )}
-          <div className={`text-black text-lg md:text-xl ${storyData.isCharacterDialogue ? '' : 'text-center'}`}>
+          <div className={`${chapterId == 4 ? 'text-white' : 'text-black'} text-lg md:text-xl ${storyData.isCharacterDialogue ? '' : 'text-center'} relative z-20`}>
             {storyData.text}
           </div>
         </div>

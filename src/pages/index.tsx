@@ -35,7 +35,7 @@ export default function StoryGame() {
         const CustomComponent = currentPage.component;
         return CustomComponent ? <CustomComponent /> : null;
       case 'dialogue':
-        return <DialogueTemplate storyData={currentPage} />;
+        return <DialogueTemplate storyData={currentPage} chapterId={gameState.currentChapter} />;
       case 'middleText':
         return <MiddleTextTemplate storyData={currentPage} />;
       case 'choice':
