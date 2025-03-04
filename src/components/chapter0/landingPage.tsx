@@ -23,7 +23,7 @@ const LandingPage = () => {
         alt="Animated logo"
         width={1920}
         height={1080}
-        className="w-full max-w-[800px] h-auto"
+        className="w-full max-w-[800px] h-auto absolute top-0 md:-top-20"
         unoptimized
       />
       <Image
@@ -31,7 +31,7 @@ const LandingPage = () => {
         alt="Animated main character"
         width={1920}
         height={1080}
-        className="w-full max-w-[800px] aspect-[1/1.5] object-cover object-bottom"
+        className="w-full md:max-w-[540px] aspect-[1/1.5] object-cover object-bottom absolute bottom-0"
         unoptimized
       />
       <div className={`text-center text-white text-2xl md:text-4xl font-bold absolute bottom-[60px] md:bottom-[100px] w-full flex justify-center items-center ${mali.className}`}>

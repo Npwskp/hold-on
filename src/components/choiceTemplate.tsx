@@ -1,7 +1,6 @@
 import React from 'react'
 import { StoryPage } from '../types/story'
 import { Mali } from 'next/font/google'
-
 const mali = Mali({
   subsets: ['thai', 'latin'],
   weight: ['400', '700'],

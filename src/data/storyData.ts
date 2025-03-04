@@ -775,7 +775,7 @@ export const storyData: Chapter[] = [
       {
         id: 5,
         type: 'choice',
-        backgroundImage: "/images/chapter3/PhoneWithScene.png",
+        backgroundImage: "/images/chapter3/MedicalRoom.png",
         choices: [
           {
             id: 1,
@@ -807,7 +807,7 @@ export const storyData: Chapter[] = [
         characterImage: "/images/chapter3/Kit2-2.png",
         characterName: "กิต",
         isCharacterDialogue: true,
-        parentPageId: 4
+        parentPageId: 5
       },
       {
         id: 8,
@@ -822,7 +822,7 @@ export const storyData: Chapter[] = [
         characterImage: "/images/chapter3/Kit2-2.png",
         characterName: "กิต",
         isCharacterDialogue: true,
-        parentPageId: 4
+        parentPageId: 5
       },
       {
         id: 10,

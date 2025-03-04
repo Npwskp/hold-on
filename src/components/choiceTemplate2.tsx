@@ -17,7 +17,7 @@ interface ChoiceTemplate2Props {
 const ChoiceTemplate2: React.FC<ChoiceTemplate2Props> = ({ storyData, onChoiceSelect, selectedChoice, selectChoice, clearSelectedChoice }) => {
   return (
     <div className="relative w-full h-screen max-w-[540px] mx-auto">
-      {/* Background image container */}
+      {/* Background layer */}
       <div className="absolute inset-0">
         <img
           src={storyData.backgroundImage}
@@ -25,33 +25,41 @@ const ChoiceTemplate2: React.FC<ChoiceTemplate2Props> = ({ storyData, onChoiceSe
           className="w-full h-full object-cover"
         />
       </div>
+      
+      {/* Phone layer */}
+      <div className="absolute inset-0">
+        <img
+          src={"/images/chapter3/PhoneAndHandCrop.png"}
+          alt="Phone"
+          className="h-full object-cover mx-auto"
+        />
+      </div>
 
-      {/* Phone screen content container */}
-      <div className="absolute left-[54%] top-[50%] -translate-x-1/2 -translate-y-1/2 w-[40%] md:w-[35%] flex flex-col justify-center">
-        {/* Choices container */}
-        <div className={`${mali.className} flex flex-col gap-[8vh] w-full px-4 md:px-3`}>
-          {storyData.choices?.map((choice, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                if (choice.nextPageId === -1) {
-                  clearSelectedChoice();
-                } else {
-                  selectChoice(choice.nextPageId);
-                  onChoiceSelect(choice.nextPageId);
-                }
-              }}
-              disabled={selectedChoice.includes(choice.nextPageId)}
-              className={`w-full py-2 px-3 text-white rounded-lg transition-colors duration-200 text-[11px] md:text-xs leading-tight ${
-                selectedChoice.includes(choice.nextPageId)
-                  ? 'bg-black/40 cursor-not-allowed'
-                  : 'bg-black/90 hover:bg-black/80'
-              }`}
-            >
-              {choice.text}
-            </button>
-          ))}
-        </div>
+      {/* Choices layer */}
+      <div className={`${mali.className} relative flex flex-col justify-center items-center w-full h-full px-8 md:px-3`}>
+				<div className="w-[80vw] md:w-[350px] h-[80vh] bg-white/90 rounded-lg flex flex-col justify-center items-center gap-[8vh]">
+					{storyData.choices?.map((choice, index) => (
+						<button
+							key={index}
+							onClick={() => {
+								if (choice.nextPageId === -1) {
+									clearSelectedChoice();
+								} else {
+									selectChoice(choice.nextPageId);
+									onChoiceSelect(choice.nextPageId);
+								}
+							}}
+							disabled={selectedChoice.includes(choice.nextPageId)}
+							className={`w-[60vw] md:w-[300px] h-[15vh] py-2 px-4 text-white rounded-lg transition-colors duration-200 text-lg md:text-xl leading-tight ${
+								selectedChoice.includes(choice.nextPageId)
+									? 'bg-black/40 cursor-not-allowed'
+									: 'bg-black/90 hover:bg-black/80'
+							}`}
+						>
+							{choice.text}
+						</button>
+					))}
+				</div>
       </div>
     </div>
   )
