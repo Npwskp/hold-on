@@ -478,7 +478,94 @@ export const storyData: Chapter[] = [
         id: 1,
         type: 'custom',
         component: EmergencyScene,
-      }
+      },
+      {
+        id: 2,
+        type: 'dialogue',
+        text: "คุณหมอกำลังรักษาอยู่ ญาติคนไข้นั่งรอก่อนนะคะ",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterName: "พยาบาล",
+        isCharacterDialogue: true
+      },
+      {
+        id: 3,
+        type: 'dialogue',
+        text: "คุณพยาบาลบอกผมด้วยน้ำเสียงจริงจัง หลังผมลุกไปถามถึงลินเป็นรอบที่สาม",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterName: "พยาบาล",
+        isCharacterDialogue: false
+      },
+      {
+        id: 4,
+        type: 'dialogue',
+        text: "ทันใดนั้นเองคุณหมอก็ออกมาจากประตู ผมรีบวิ่งพรวดเข้าไปหาก่อนพยาบาลคนนั้นจะเอื้อมมือมารั้งผมได้",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterName: "กิต",
+        isCharacterDialogue: false
+      },
+      {
+        id: 5,
+        type: 'dialogue',
+        text: "เป็นยังไงบ้างครับคุณหมอ",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Kit3.png",
+        characterName: "กิต",
+        isCharacterDialogue: true
+      },
+      {
+        id: 6,
+        type: 'dialogue',
+        text: "คุณหมอสะดุ้งเล็กน้อยตอนเห็นผมวิ่งหน้าเกือบทิ่มไปจุ่มเท้าเขา ก่อนจะตอบด้วยน้ำเสียงเรียบเฉย",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Doctor1.png",
+        characterName: "คุณหมอ",
+        isCharacterDialogue: false
+      },
+      {
+        id: 7,
+        type: 'dialogue',
+        text: "อาการยังน่าเป็นห่วงครับ เพราะคนไข้เสียเลือดค่อนข้างเยอะ",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Doctor2.png",
+        characterName: "คุณหมอ",
+        isCharacterDialogue: true
+      },
+      {
+        id: 8,
+        type: 'dialogue',
+        text: "เขาพูดทั้งๆที่ยังคงก้มดูกระดานในมือ แต่ท่าทางที่ดูเรียบเฉย ไม่สามารถกลบความเหนื่อยล้าทางแววตาของเขาได้เลย",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Doctor3.png",
+        characterName: "คุณหมอ",
+        isCharacterDialogue: false
+      },
+      {
+        id: 9,
+        type: 'dialogue',
+        text: "อีกอย่าง..",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Doctor4.png",
+        characterName: "คุณหมอ",
+        isCharacterDialogue: true
+      },
+      {
+        id: 10,
+        type: 'dialogue',
+        text: "เขาเงยหน้าขึ้นมามองผม",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Doctor5.png",
+        characterName: "คุณหมอ",
+        isCharacterDialogue: false
+      },
+      {
+        id: 11,
+        type: 'dialogue',
+        text: "เลือดในคลังเราเหลือไม่มากพอจะทำการผ่าตัดให้เธอได้ทันที",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Doctor4.png",
+        characterName: "คุณหมอ",
+        isCharacterDialogue: true
+      },
     ]
   }
 ];
