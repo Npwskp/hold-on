@@ -35,7 +35,7 @@ const LandingPage = () => {
         unoptimized
       />
       <div className={`text-center text-white text-2xl md:text-4xl font-bold absolute bottom-[60px] md:bottom-[100px] w-full flex justify-center items-center ${mali.className}`}>
-        กดที่ใดก็ได้เพื่อเริ่มเกม
+        กดที่หน้าจอเพื่อเริ่มเกม
       </div>
     </div>
   )

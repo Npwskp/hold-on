@@ -10,6 +10,8 @@ import Fact4 from '@/components/chapter2/fact4';
 import Fact5 from '@/components/chapter3/fact5';
 import Fact6 from '@/components/chapter3/fact6';
 import Fact7 from '@/components/chapter3/fact7';
+import EndScene1 from '@/components/chapter5/endScene1';
+import EndScene2 from '@/components/chapter5/endScene2';
 
 export const storyData: Chapter[] = [
   {
@@ -1167,6 +1169,103 @@ export const storyData: Chapter[] = [
         characterName: "กิต",
         isCharacterDialogue: false
       },
+      {
+        id: 32,
+        type: 'dialogue',
+        backgroundImage: "/images/chapter4/CutScene1.mp4",
+        characterName: "ลิน",
+        isCharacterDialogue: false,
+        isVideo: true
+      },
+      {
+        id: 33,
+        type: 'dialogue',
+        text: "นั่งรออีกไม่กี่ชั่วโมง ฟ้าก็สว่างแล้ว",
+        backgroundImage: "/images/chapter4/CutScene1.mp4",
+        characterName: "ลิน",
+        isCharacterDialogue: true,
+        isVideo: true
+      },
+      {
+        id: 34,
+        type: 'dialogue',
+        text: "จู่ๆลินก็พูดขึ้นมา ก่อนหันมาทางผม",
+        backgroundImage: "/images/chapter4/CutScene1.mp4",
+        characterName: "ลิน",
+        isCharacterDialogue: false,
+        isVideo: true
+      },
+      {
+        id: 35,
+        type: 'dialogue',
+        text: "แกไม่คิดว่ามันเป็นการรอคอยที่คุ้มค่าหรอ",
+        backgroundImage: "/images/chapter4/CutScene1.mp4",
+        characterName: "ลิน",
+        isCharacterDialogue: true,
+        isVideo: true
+      },
+      {
+        id: 36,
+        type: 'dialogue',
+        backgroundImage: "/images/chapter4/CutScene2.mp4",
+        characterName: "กิต",
+        isCharacterDialogue: false,
+        isVideo: true
+      },
+      {
+        id: 37,
+        type: 'dialogue',
+        text: "ผมหยักไหล่เบาๆแทนคำตอบ",
+        backgroundImage: "/images/chapter4/CutScene2.mp4",
+        characterName: "กิต",
+        isCharacterDialogue: false,
+        isVideo: true
+      },
+      {
+        id: 38,
+        type: 'dialogue',
+        text: "ไม่รู้สิ ก็คงงั้นแหละมั้ง..",
+        backgroundImage: "/images/chapter4/CutScene2.mp4",
+        characterName: "กิต",
+        isCharacterDialogue: false,
+        isVideo: true
+      },
+      {
+        id: 39,
+        type: 'dialogue',
+        text: "เพราะหลังจากที่เฝ้ารออย่างยาวนาน",
+        backgroundImage: "/images/chapter4/CutScene2.mp4",
+        characterName: "กิต",
+        isCharacterDialogue: false,
+        isVideo: true
+      },
+      {
+        id: 40,
+        type: 'middleText',
+        text: "พระอาทิตย์ขึ้นวันนั้นก็สวยจริงๆนั่นแหละ",
+      },
+    ]
+  },
+  {
+    id: 6,
+    title: "Chapter 5: Epilogue",
+    pages: [
+      {
+        id: 1,
+        type: 'dialogue',
+        backgroundImage: "/images/chapter5/ToBeContinued.mp4",
+        isVideo: true
+      },
+      {
+        id: 2,
+        type: 'custom',
+        component: EndScene1
+      },
+      {
+        id: 3,
+        type: 'custom',
+        component: EndScene2
+      }
     ]
   }
 ];
