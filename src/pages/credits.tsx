@@ -59,63 +59,73 @@ const SecondCreditPage = () => (
     <HamburgerMenu />
     <div className="flex flex-col items-center justify-center h-full w-full max-w-[540px] px-8 md:px-16">
       <h1 className={`text-3xl font-bold mb-8 ${mali.className}`}>เครดิต</h1>
-      <div className="w-full grid grid-cols-2 gap-x-12">
-        <div className="space-y-6">
-          <div>
-            <p className="text-lg mb-2">ผลงานนวัตกรรมสื่อสารเชิงพหุสื่อ</p>
-            <p>วิจิตรา</p>
-            <p>ทิตติพงษ์</p>
-            <p>ลมรว</p>
+      <div className="w-full px-4 md:px-8 py-1 md:py-4">
+        <div>
+          <p className="text-lg mb-2 w-full">ผลงานนวัตกรรมสื่อสารเชิงพหุสื่อ</p>
+          <div className='flex flex-row justify-start gap-2 w-full'>
+            <div>
+              <p>จิรัชญา</p>
+              <p>กิตติพงษ์</p>
+              <p>ณชร</p>
+            </div>
+            <div>
+              <p>เฟื่องทิพย์</p>
+              <p>แสงกระจ่าง</p>
+              <p>พฤทธิกุล</p>
+            </div>
           </div>
-
-          <div>
-            <p className="text-lg mb-2">นิสิตจาก</p>
+          <div className='border-l-2 border-white pl-4 m-8'>
+            <p>นิสิตจาก</p>
             <p>วิทยาลัยนวัตกรรมสื่อสารสังคม</p>
             <p>เอกการสื่อสารเพื่อสุขภาพ</p>
             <p>มหาวิทยาลัยศรีนครินทรวิโรฒ</p>
           </div>
-
-          <div>
-            <p className="text-lg mb-2">โครงเรื่อง</p>
-            <p>วิจิตรา</p>
-            <p>ทิตติพงษ์</p>
-            <p>ลมรว</p>
+          <div className='flex flex-row justify-between items-start gap-2'>
+            <div className=''>
+                <div>
+                  <p>โครงเรื่อง</p>
+                  <br/>
+                  <br/>
+                  <p>บทบรรยาย</p>
+                  <p>ภาพประกอบ</p>
+                  <p>เสียงประกอบ</p>
+                  <p>พัฒนา</p>
+                </div>
+            </div>
+            <div className='flex flex-row justify-start gap-2'>
+              <div>
+                <p>จิรัชญา</p>
+                <p>กิตติพงษ์</p>
+                <p>ณชร</p>
+                <p>จิรัชญา</p>
+                <p>จิรัชญา</p>
+                <p>ณชร</p>
+                <p>ณพวิทย์</p>
+              </div>
+              <div>
+                <p>เฟื่องทิพย์</p>
+                <p>แสงกระจ่าง</p>
+                <p>พฤทธิกุล</p>
+                <p>เฟื่องทิพย์</p>
+                <p>เฟื่องทิพย์</p>
+                <p>พฤทธิกุล</p>
+                <p>ศุกลปักษ์</p>
+              </div>
+            </div>
           </div>
-
-          <div>
-            <p className="text-lg mb-2">บทบรรยาย</p>
-            <p>วิจิตรา</p>
-          </div>
-        </div>
-
-        <div className="space-y-6">
-          <div>
-            <p className="text-lg mb-2">ภาพประกอบ</p>
-            <p>พัฒนา</p>
-            <p>สุขสมใจ</p>
-          </div>
-
-          <div>
-            <p className="text-lg mb-2">เสียงประกอบ</p>
-            <p>ณชร</p>
-            <p>พฤทธิกุล</p>
-          </div>
-
-          <div>
-            <p className="text-lg mb-2">พัฒนา</p>
-            <p>ณพวิทย์</p>
-            <p>ศุกลปักษ์</p>
-          </div>
-
-          <div>
-            <p className="text-lg mb-2">ข้อมูล</p>
-            <p>ศูนย์บริการโลหิตแห่งชาติ</p>
-            <p>สภากาชาดไทย</p>
+          <div className='flex flex-row justify-between items-start gap-2 mt-4'>
+            <div>
+              ข้อมูล
+            </div>
+            <div>
+              <p>ศูนย์บริการโลหิตแห่งชาติ</p>
+              <p>สภากาชาดไทย</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <p className="text-sm text-center mt-8">
+      <p className="text-center mt-8">
         ขอขอบคุณทีมงานทุกท่านที่มีส่วนร่วมในผลงานนี้
       </p>
     </div>
