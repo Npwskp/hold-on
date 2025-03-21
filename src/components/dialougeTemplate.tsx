@@ -15,13 +15,11 @@ const mali = Mali({
 const DialogueTemplate: React.FC<DialogueTemplateProps> = ({ storyData, chapterId }) => {
   return (
     <div 
-      className={`dialogue-container flex flex-col items-center justify-end mx-auto`}
+      className={`dialogue-container flex flex-col items-center justify-end mx-auto w-full max-w-[540px]`}
       style={{
         position: 'relative',
         minHeight: '100vh',
-        width: storyData.backgroundImage?.includes('SongkranScene') ? '100vw' : '100%',
-        maxWidth: storyData.backgroundImage?.includes('SongkranScene') ? 'none' : '540px',
-        aspectRatio: storyData.backgroundImage?.includes('SongkranScene') ? 'auto' : '16/9'
+        aspectRatio: '16/9'
       }}
     >
       {storyData.backgroundImage && (
@@ -51,12 +49,12 @@ const DialogueTemplate: React.FC<DialogueTemplateProps> = ({ storyData, chapterI
           width={500} 
           height={500}
           priority={true}
-          className="w-[50vw] md:w-[25vw] h-auto me-28 md:me-40 z-10 relative"
+          className="w-[40%] md:w-[50%] h-auto me-28 md:me-40 z-10 relative"
         />
       )}
       
       {storyData.text && (
-        <div className={`flex flex-col justify-center p-8 md:p-14 relative mb-[5vh] w-[85vw] md:w-[640px] aspect-[21/8] ${chapterId == 4 ? 'bg-gray-custom/90' : 'bg-white/90'} rounded-lg ${mali.className} z-20`}>
+        <div className={`flex flex-col justify-center p-8 md:p-14 relative mb-[5vh] w-[85%] md:w-[90%] aspect-[21/8] ${chapterId == 4 ? 'bg-gray-custom/90' : 'bg-white/90'} rounded-lg ${mali.className} z-20`}>
           {storyData.isCharacterDialogue && (
             <div className="absolute -top-8 md:-top-10 left-[5%] bg-black/90 w-[30%] md:w-[150px] aspect-[20/9] rounded-xl flex justify-center items-center z-30">
               <h2 className="text-xl md:text-2xl z-40">{storyData.characterName}</h2>

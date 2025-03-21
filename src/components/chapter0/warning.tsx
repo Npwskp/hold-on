@@ -10,22 +10,24 @@ const mali = Mali({
 
 const LandingPage = () => {
   return (
-    <div
-      className="flex flex-col items-center justify-center w-full min-h-[100dvh]"
+    <div className='w-full min-h-[100dvh] flex justify-center'>
+      <div
+        className="flex flex-col items-center justify-center w-full max-w-[540px]"
     >
       <Image
         src="/images/Warning.png"
         alt="Warning"
         width={500}
         height={500}
-        className="max-md:w-[70dvw] max-md:h-[70dvw]"
+        className="w-[70dvw] md:w-[350px]"
       />
-      <div className={`text-center text-white text-md md:text-2xl w-full flex flex-col justify-center items-center ${mali.className}`}>
-        <p>เรื่องราวในเกมนี้เป็นเรื่องสมมุติ ตัวละคร เหตุการณ์</p>
-        <p>และสถานที่ในเกมนี้ถูกสร้างขึ้นเพื่อความบันเทิง</p>
-        <p>โปรดใช้วิจารณญาณในการเล่น</p>
-        <p>อาจมีเนื้อหาซึ่งอาจส่งผลกระทบต่อความรู้สึก</p>
-        <p>กับผู้เล่นที่มีความอ่อนไหว</p>
+      <div className={`text-center text-white text-md md:text-xl w-full flex flex-col justify-center items-center ${mali.className} px-12`}>
+        เรื่องราวในเกมนี้เป็นเรื่องสมมุติ ตัวละคร เหตุการณ์
+        และสถานที่ในเกมนี้ถูกสร้างขึ้นเพื่อความบันเทิง
+        โปรดใช้วิจารณญาณในการเล่น
+        อาจมีเนื้อหาซึ่งอาจส่งผลกระทบต่อความรู้สึก
+        กับผู้เล่นที่มีความอ่อนไหว
+        </div>
       </div>
     </div>
   )

@@ -9,7 +9,7 @@ const mali = Mali({
 const EmergencyScene = () => {
   return (
     <div 
-      className={`w-full flex flex-col items-center justify-center mx-auto ${mali.className} text-black text-lg md:text-2xl`}
+      className={`w-full flex flex-col items-center justify-center mx-auto ${mali.className} text-black text-lg`}
       style={{
         backgroundImage: 'url(/images/chapter2/EmergencyRoom.png)',
         backgroundSize: 'cover',
@@ -21,7 +21,7 @@ const EmergencyScene = () => {
         aspectRatio: '16/9'
       }}
     >
-      <div className='`flex flex-col justify-center items-center p-8 md:p-14 relative mb-[5vh] w-[85vw] md:w-[640px] aspect-[21/8] bg-white opacity-90 rounded-lg'>
+      <div className='`flex flex-col justify-center items-center p-8 md:p-14 relative mb-[5vh] w-[85%] aspect-[21/8] bg-white opacity-90 rounded-lg'>
         <p className='text-center'>ลินไม่ใช่คนเจ็บคนเดียว ในตอนนี้มีผู้คน
             มากมายที่ประสบอุบัติเหตุรถเสียหลักพุ่งชน
             คนที่เดินเล่นสงกรานต์ริมถนน 

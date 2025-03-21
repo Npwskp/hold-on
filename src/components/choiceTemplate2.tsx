@@ -16,7 +16,7 @@ interface ChoiceTemplate2Props {
 }
 const ChoiceTemplate2: React.FC<ChoiceTemplate2Props> = ({ storyData, onChoiceSelect, selectedChoice, selectChoice, clearSelectedChoice }) => {
   return (
-    <div className="relative w-full h-screen max-w-[540px] mx-auto">
+    <div className="relative w-full max-w-[540px] mx-auto h-screen">
       {/* Background layer */}
       <div className="absolute inset-0">
         <img

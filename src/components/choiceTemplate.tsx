@@ -17,12 +17,10 @@ interface ChoiceTemplateProps {
 const ChoiceTemplate: React.FC<ChoiceTemplateProps> = ({ storyData, onChoiceSelect, selectedChoice, selectChoice, clearSelectedChoice }) => {
   return (
     <div 
-      className="choice-container flex flex-col items-center justify-end mx-auto"
+      className="choice-container flex flex-col items-center justify-end mx-auto w-full max-w-[540px]"
       style={{
         position: 'relative',
         minHeight: '100vh',
-        width: '100%',
-        maxWidth: '540px',
         aspectRatio: '16/9'
       }}
     >
@@ -34,7 +32,7 @@ const ChoiceTemplate: React.FC<ChoiceTemplateProps> = ({ storyData, onChoiceSele
         />
       )}
       
-      <div className={`flex flex-col justify-center p-8 md:p-14 relative mb-[5vh] w-[85vw] md:w-[640px] aspect-[21/8] bg-white/90 rounded-lg ${mali.className} z-20`}>
+      <div className={`flex flex-col justify-center p-8 md:p-14 relative mb-[5vh] w-[85%] md:w-[90%] aspect-[21/8] bg-white/90 rounded-lg ${mali.className} z-20`}>
         {storyData.text && (
           <div className="text-black text-lg md:text-xl mb-4 text-center">
             {storyData.text}
