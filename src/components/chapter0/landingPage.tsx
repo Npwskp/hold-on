@@ -1,6 +1,6 @@
 import React from 'react'
-import { HiMenu } from 'react-icons/hi'
 import Image from 'next/image'
+import HamburgerMenu from '../common/HamburgerMenu'
 
 import { Mali } from 'next/font/google';
 
@@ -14,9 +14,7 @@ const LandingPage = () => {
     <div
       className="flex flex-col items-center justify-between w-full min-h-[100dvh] relative"
     >
-      <button className="absolute top-4 right-4 z-10">
-        <HiMenu className="w-8 h-8 text-white" />
-      </button>
+      <HamburgerMenu />
       
       <Image
         src="/images/Animated_Logo.gif"

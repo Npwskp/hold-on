@@ -1,5 +1,6 @@
 import React from 'react'
 import { Noto_Sans_Thai } from 'next/font/google';
+import HamburgerMenu from '../common/HamburgerMenu';
 
 const notoSansThai = Noto_Sans_Thai({
   subsets: ['thai'],
@@ -30,6 +31,7 @@ const EndScene2 = () => {
           alt="Background"
           className="object-cover z-0 absolute inset-0 w-full h-full"
         />
+      <HamburgerMenu />
       <div className='flex flex-col justify-center gap-4 md:gap-6 max-w-[800px] px-4 h-full mt-20 md:mt-24 z-10'>
         <div className='flex flex-col gap-1 text-center text-xs md:text-sm w-[90vw] md:w-[400px]'>
             <p>ร่วมเป็นผู้บริจาคเลือด กับศูนย์บริการโลหิตแห่งชาติ สภากาชาดไทย </p>
