@@ -14,6 +14,7 @@ const Fact7 = () => {
         src={"/images/fact/fact7.gif"}
         alt="Background"
         fill
+        unoptimized
         priority={true}
         className="object-cover -z-10 absolute inset-0"
       />

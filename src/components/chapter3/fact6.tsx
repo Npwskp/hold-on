@@ -13,12 +13,21 @@ const Fact6 = () => {
         src={"/images/fact/fact6.gif"}
         alt="Background"
         fill
+        unoptimized
         priority={true}
         className="object-cover -z-10 absolute inset-0"
       />
-      <div className='flex flex-col justify-center gap-4 md:gap-6 px-8 md:px-12 mt-2'>
-        <div className='flex flex-col gap-1 text-lg md:text-2xl'>
+      <div className='flex flex-col justify-center gap-4 md:gap-6 px-8 md:px-12 mb-20 md:mb-28'>
+        <div className='flex flex-row w-full justify-between items-end text-lg md:text-2xl'>
           <p>ทางศูนย์บริจาคโลหิตแห่งชาติ</p>
+          <Image
+            src={"/images/fact/Bloodlogo.png"}
+            alt="Background"
+            width={150}
+            height={150}
+            priority={true}
+            className="object-cover w-[100px] md:w-[150px] aspect-square"
+          />
         </div>
         <div className='flex flex-col gap-1 border-l-2 pl-4 md:pl-8 text-2xl md:text-3xl max-w-[320px] md:max-w-[540px]'>
           <b>ได้มีการกำหนดคุณสมบัติ</b>
