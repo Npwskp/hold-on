@@ -12,6 +12,7 @@ import Fact6 from '@/components/chapter3/fact6';
 import Fact7 from '@/components/chapter3/fact7';
 import EndScene1 from '@/components/chapter5/endScene1';
 import EndScene2 from '@/components/chapter5/endScene2';
+import EndChapterScence from '@/components/chapter4/endChapterScence';
 
 export const storyData: Chapter[] = [
   {
@@ -142,6 +143,14 @@ export const storyData: Chapter[] = [
       {
         id: 14,
         type: 'dialogue',
+        text: "สงสัยเราจะตีความคำว่าความสนุกกันคนแบบแหละ",
+        backgroundImage: "/images/chapter1/SongkranSceneCut.png",
+        characterName: "กิต",
+        isCharacterDialogue: true
+      },
+      {
+        id: 15,
+        type: 'dialogue',
         text: "นานๆทีน่า",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
         characterImage: "/images/chapter1/Lin4.png",
@@ -149,7 +158,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true
       },
       {
-        id: 15,
+        id: 16,
         type: 'dialogue',
         text: "ลินพูดพร้อมตบที่ไหล่ของผมเบาๆก่อนจะหัวเราะออกมา",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -158,7 +167,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: false
       },
       {
-        id: 16,
+        id: 17,
         type: 'dialogue',
         text: "นู่น! ตรงนั้น เขามุงอะไรกันอ่ะ",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -167,7 +176,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true
       },
       {
-        id: 17,
+        id: 18,
         type: 'dialogue',
         text: "เห้ย เดี๋ยว!",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -176,7 +185,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true
       },
       {
-        id: 18,
+        id: 19,
         type: 'dialogue',
         text: "ยังไม่ทันได้พูดอะไรลินก็ออกวิ่งหายไปกลางกลุ่มฝูงชน",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -184,7 +193,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: false
       },
       {
-        id: 19,
+        id: 20,
         type: 'dialogue',
         text: "เหลือจะเชื่อเลยเว้ย",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -193,7 +202,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true
       },
       {
-        id: 20,
+        id: 21,
         type: 'dialogue',
         text: "ผมสบถอีกครั้ง ในขณะที่สายตาก็พยายามมองหามันไปด้วย",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -202,7 +211,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: false
       },
       {
-        id: 21,
+        id: 22,
         type: 'dialogue',
         text: "กิต!!",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -210,7 +219,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true
       },
       {
-        id: 22,
+        id: 23,
         type: 'dialogue',
         text: "ผมกวาดตาตามเสียงที่แว่วมา",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -219,7 +228,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: false
       },
       {
-        id: 23,
+        id: 24,
         type: 'dialogue',
         text: "ไอ้กิต!!",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -227,7 +236,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true
       },
       {
-        id: 24,
+        id: 25,
         type: 'dialogue',
         text: "… ไหนวะ",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -236,7 +245,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true
       },
       {
-        id: 25,
+        id: 26,
         type: 'dialogue',
         text: "ทางนี้!",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -244,7 +253,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true
       },
       {
-        id: 26,
+        id: 27,
         type: 'dialogue',
         text: "และในตอนนั้นเอง ผมก็เห็นร่างเล็กๆ พยายามกระโดดโบกมือออกมาจากฝูงชน",
         backgroundImage: "/images/chapter1/CutScene2.mp4",
@@ -253,7 +262,7 @@ export const storyData: Chapter[] = [
         isVideo: true
       },
       {
-        id: 27,
+        id: 28,
         type: 'dialogue',
         text: "ถึงจะนิสัยต่างกัน แต่ผมกับลินเป็นเพื่อน สนิทกันมาได้นานขนาดนี้",
         backgroundImage: "/images/chapter1/CutScene2.mp4",
@@ -262,7 +271,7 @@ export const storyData: Chapter[] = [
         isVideo: true
       },
       {
-        id: 28,
+        id: 29,
         type: 'dialogue',
         text: "การมีลินอยู่ในชีวิตถึงจะวุ่นวายไปซักหน่อย",
         backgroundImage: "/images/chapter1/CutScene2.mp4",
@@ -271,7 +280,7 @@ export const storyData: Chapter[] = [
         isVideo: true
       },
       {
-        id: 29,
+        id: 30,
         type: 'dialogue',
         text: "แต่ลึกๆ ผมก็หวัง อยากให้ความสุขแบบนี้ คงอยู่ตลอดไป",
         backgroundImage: "/images/chapter1/CutScene2.mp4",
@@ -280,7 +289,7 @@ export const storyData: Chapter[] = [
         isVideo: true
       },
       {
-        id: 30,
+        id: 31,
         type: 'dialogue',
         text: "ข้าวไข่เจียวป่าว!",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -289,7 +298,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true
       },
       {
-        id: 31,
+        id: 32,
         type: 'dialogue',
         text: "เสียงเล็กๆแว่วตามเสียงดนตรีเบสหนัก",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -297,7 +306,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: false
       },
       {
-        id: 32,
+        id: 33,
         type: 'dialogue',
         text: "ฮะ?!",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -306,7 +315,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true
       },
       {
-        id: 33,
+        id: 34,
         type: 'dialogue',
         text: "ตรงนี้เขาขายข้าวไข่เจียว! เอาป่าว",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -315,7 +324,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true
       },
       {
-        id: 34,
+        id: 35,
         type: 'dialogue',
         text: "ลินขยับปากและทำท่าทางประหลาด จากตรงนั้น เพื่อทำให้ผมเข้าใจ",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -324,7 +333,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: false
       },
       {
-        id: 35,
+        id: 36,
         type: 'dialogue',
         text: "ไม่เอา! ออกมา!",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -333,7 +342,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true
       },
       {
-        id: 36,
+        id: 37,
         type: 'dialogue',
         text: "ผมตะโกนบอก พร้อมทำท่าทางปฎิเสธ และกวักมือเรียกเธอออกมา",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -342,7 +351,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: false
       },
       {
-        id: 37,
+        id: 38,
         type: 'dialogue',
         text: "ลินพยักหน้าแล้วหันกลับไปยังกลุ่มฝูงชน",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -351,7 +360,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: false
       },
       {
-        id: 38,
+        id: 39,
         type: 'dialogue',
         text: "และเมื่อวิเคราะห์จากประสบการณ์ที่ผ่านมาจากการเป็นเพื่อนกันเกิน10ปี",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -360,7 +369,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: false
       },
       {
-        id: 39,
+        id: 40,
         type: 'dialogue',
         text: "ไอ้นี่… ซื้อชัวร์",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -369,7 +378,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: false
       },
       {
-        id: 40,
+        id: 41,
         type: 'dialogue',
         text: "ใจจะซื้ออยู่แล้วจะหันมาถามทำไมวะ",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
@@ -378,17 +387,9 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true
       },
       {
-        id: 41,
-        type: 'dialogue',
-        text: "ผมยืนรออยู่อีกฟากของถนนแบบเซ็งๆ ในขณะที่มองผู้คนที่ผ่านไปผ่านมา",
-        backgroundImage: "/images/chapter1/CutScene3.png",
-        characterName: "กิต",
-        isCharacterDialogue: false
-      },
-      {
         id: 42,
         type: 'dialogue',
-        text: "ลินพูดพร้อมตบที่ไหล่ของผมเบาๆก่อนจะหัวเราะออกมา",
+        text: "ผมยืนรออยู่อีกฟากของถนนแบบเซ็งๆ ในขณะที่มองผู้คนที่ผ่านไปผ่านมา",
         backgroundImage: "/images/chapter1/CutScene3.png",
         characterName: "กิต",
         isCharacterDialogue: false
@@ -524,7 +525,7 @@ export const storyData: Chapter[] = [
       {
         id: 6,
         type: 'dialogue',
-        text: "คุณหมอสะดุ้งเล็กน้อยตอนเห็นผมวิ่งหน้าเกือบทิ่มไปจุ่มเท้าเขา ก่อนจะตอบด้วยน้ำเสียงเรียบเฉย",
+        text: "คุณหมอสะดุ้งเล็กน้อยตอนเห็นผมวิ่งหน้าเกือบทิ่มก่อนจะตอบด้วยน้ำเสียงเรียบเฉย",
         backgroundImage: "/images/chapter2/EmergencyRoom.png",
         characterImage: "/images/chapter2/Doctor1.png",
         characterName: "คุณหมอ",
@@ -577,6 +578,15 @@ export const storyData: Chapter[] = [
       },
       {
         id: 12,
+        type: 'dialogue',
+        text: "ทางโรงพยาบาลกำลังยื่นขอกับทางศูนย์บริการโลหิตไป ซึ่งก็ต้องใช้เวลาครับ",
+        backgroundImage: "/images/chapter2/EmergencyRoom.png",
+        characterImage: "/images/chapter2/Doctor4.png",
+        characterName: "คุณหมอ",
+        isCharacterDialogue: true
+      },
+      {
+        id: 13,
         type: 'choice',
         text: "ผมจะทำอย่างไรดี...",
         backgroundImage: "/images/chapter2/EmergencyRoom.png",
@@ -584,22 +594,22 @@ export const storyData: Chapter[] = [
           {
             id: 1,
             text: "เอาเลือดของผมไปก่อนไม่ได้หรอครับ",
-            nextPageId: 13
+            nextPageId: 14
           },
           {
             id: 2,
             text: "คนจะตายอยู่แล้วจะให้มารอได้ยังไง!",
-            nextPageId: 17
+            nextPageId: 18
           },
           {
             id: -1,
             text: "เข้าใจแล้วครับ",
-            nextPageId: 23
+            nextPageId: 24
           }
         ]
       },
       {
-        id: 13,
+        id: 14,
         type: 'dialogue',
         text: "ผมจำได้ว่าผมเลือดกรุ๊ป O เหมือนลิน เอาเลือดของผมไปไม่ได้หรอครับ",
         backgroundImage: "/images/chapter2/EmergencyRoom.png",
@@ -608,7 +618,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true,
       },
       {
-        id: 14,
+        id: 15,
         type: 'dialogue',
         text: "ขอโทษด้วยจริงๆ ครับ เลือดที่จะนำมารักษาผู้ป่วยจะต้องได้รับการตรวจคัดกรองจากห้องแล็บก่อน ",
         backgroundImage: "/images/chapter2/EmergencyRoom.png",
@@ -617,7 +627,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true,
       },
       {
-        id: 15,
+        id: 16,
         type: 'dialogue',
         text: "แล้วจากประวัติผู้ป่วย กรุ๊ปเลือดเธอเป็น O- ต้องรับเลือดกรุ๊ป O- เหมือนกันเท่านั้นครับ",
         backgroundImage: "/images/chapter2/EmergencyRoom.png",
@@ -626,13 +636,13 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true,
       },
       {
-        id: 16,
+        id: 17,
         type: 'custom',
         component: Fact2,
         parentPageId: 12,
       },
       {
-        id: 17,
+        id: 18,
         type: 'dialogue',
         text: "คนจะตายอยู่ตรงหน้าหมอจะมาบอกให้ผมรอเนี่ยนะ!",
         backgroundImage: "/images/chapter2/EmergencyRoom.png",
@@ -641,7 +651,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true,
       },
       {
-        id: 18,
+        id: 19,
         type: 'dialogue',
         text: "ผมขึ้นเสียง ทั้งๆที่รู้ว่าไม่ควรทำ",
         backgroundImage: "/images/chapter2/EmergencyRoom.png",
@@ -650,7 +660,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: false,
       },
       {
-        id: 19,
+        id: 20,
         type: 'dialogue',
         text: "ขอโทษด้วยจริงๆครับ",
         backgroundImage: "/images/chapter2/EmergencyRoom.png",
@@ -659,7 +669,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true,
       },
       {
-        id: 20,
+        id: 21,
         type: 'dialogue',
         text: "สีหน้าของคุณหมอยังคงสุขุมและเรียบเฉย",
         backgroundImage: "/images/chapter2/EmergencyRoom.png",
@@ -668,7 +678,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: false,
       },
       {
-        id: 21,
+        id: 22,
         type: 'dialogue',
         text: "ปกติช่วงสงกรานต์แบบนี้ เลือดในคลังเรามีไม่พอใช้อยู่แล้ว ยิ่งกับอุบัติเหตุใหญ่กระทันหันแบบนี้อีก",
         backgroundImage: "/images/chapter2/EmergencyRoom.png",
@@ -677,13 +687,13 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true,
       },
       {
-        id: 22,
+        id: 23,
         type: 'custom',
         component: Fact3,
         parentPageId: 12,
       },
       {
-        id: 23,
+        id: 24,
         type: 'dialogue',
         text: "เข้าใจแล้วครับ",
         backgroundImage: "/images/chapter2/EmergencyRoom.png",
@@ -692,7 +702,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true,
       },
       {
-        id: 24,
+        id: 25,
         type: 'dialogue',
         text: "ผมเข้าใจว่าคุณกำลังร้อนใจ ผมเองก็เสียใจที่ต้องบอกว่าเราทำได้แค่รอ",
         backgroundImage: "/images/chapter2/EmergencyRoom.png",
@@ -701,7 +711,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true,
       },
       {
-        id: 25,
+        id: 26,
         type: 'dialogue',
         text: "แต่ไม่ว่ายังไงทางโรงพยาบาลสัญญาว่าจะดูแลเธอให้ถึงที่สุดครับ",
         backgroundImage: "/images/chapter2/EmergencyRoom.png",
@@ -710,7 +720,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true,
       },
       {
-        id: 26,
+        id: 27,
         type: 'dialogue',
         text: "เขาพูดทิ้งท้ายก่อนขอตัวไปทำงานต่อ",
         backgroundImage: "/images/chapter2/EmergencyRoom.png",
@@ -719,7 +729,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: false,
       },
       {
-        id: 27,
+        id: 28,
         type: 'dialogue',
         text: "ผมเดินกลับไปนั่งเก้าอี้หน้าห้องฉุกเฉินที่ตอนนี้เต็มไปด้วยญาติคนเจ็บคนอื่นๆกำลังนั่งรออย่างสิ้นหวัง",
         backgroundImage: "/images/chapter2/EmergencyRoom.png",
@@ -727,12 +737,12 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: false
       },
       {
-        id: 28,
+        id: 29,
         type: 'middleText',
         text: "“รอก่อนนะ\nมันจะต้องมีทางอื่นๆที่ช่วยได้แน่”",
       },
       {
-        id: 29,
+        id: 30,
         type: 'custom',
         component: Fact4
       }
@@ -804,7 +814,7 @@ export const storyData: Chapter[] = [
       {
         id: 7,
         type: 'dialogue',
-        text: "ไม่ไหวแฮะ คุณหมอก็บอกแล้วด้วยว่าผู้บริจาคต้องสุขภาพแข็งแรง และเตรียมตัวมาอย่างดี ต่อให้มาได้จริงก็อาจบริจาคไม่ได้ แถมต้องผ่านขั้นตอนตรวจเลือดอีก",
+        text: "ไม่ไหวแฮะ คุณหมอก็บอกแล้วด้วยว่าผู้บริจาคต้องสุขภาพแข็งแรง และเตรียมตัวมาอย่างดี ต่อให้มาได้จริงก็อาจบริจาคไม่ได้ ",
         backgroundImage: "/images/chapter3/Hallway.png",
         characterImage: "/images/chapter3/Kit2-2.png",
         characterName: "กิต",
@@ -819,7 +829,7 @@ export const storyData: Chapter[] = [
       {
         id: 9,
         type: 'dialogue',
-        text: "ไม่ไหวแฮะ คุณหมอก็บอกแล้วด้วยว่าผู้บริจาคต้องสุขภาพแข็งแรง และเตรียมตัวมาอย่างดี ต่อให้มาได้จริงก็อาจบริจาคไม่ได้ แถมต้องผ่านขั้นตอนตรวจเลือดอีก",
+        text: "ไม่ไหวแฮะ การที่เราจะช่วยลินได้นั้น ต้องมาจากคลังเลือดสำรองเท่านั้น การที่เราโพสต์ขอความช่วยเหลือผ่านโซเชียลมีเดีย ไม่ใช่เรื่องที่ต้องทำในตอนนี้",
         backgroundImage: "/images/chapter3/Hallway.png",
         characterImage: "/images/chapter3/Kit2-2.png",
         characterName: "กิต",
@@ -1241,8 +1251,8 @@ export const storyData: Chapter[] = [
       },
       {
         id: 40,
-        type: 'middleText',
-        text: "พระอาทิตย์ขึ้นวันนั้นก็สวยจริงๆนั่นแหละ",
+        type: 'custom',
+        component: EndChapterScence
       },
     ]
   },
