@@ -5,11 +5,18 @@ import MiddleTextTemplate from '../components/middleTextTemplate';
 import ChoiceTemplate from '../components/choiceTemplate';
 import { useEffect } from 'react';
 import ChoiceTemplate2 from '@/components/choiceTemplate2';
+import { useSound } from '../hooks/useSound';
 
 export default function StoryGame() {
   const { gameState, progressToNextPage, progressToPreviousPage, progressTo, selectChoice, clearSelectedChoice } = useGame();
   const currentPage = getPage(gameState.currentChapter, gameState.currentPage);
   const currentChapter = getChapter(gameState.currentChapter);
+
+  // Initialize sound system with current chapter and page
+  useSound({ 
+    chapterId: gameState.currentChapter,
+    pageId: gameState.currentPage 
+  });
 
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
@@ -22,7 +29,7 @@ export default function StoryGame() {
 
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [progressToNextPage, progressToPreviousPage]);
+  }, [progressToNextPage, progressToPreviousPage, currentPage?.type]);
 
   if (!currentPage || !currentChapter) return <div>Story not found</div>;
 

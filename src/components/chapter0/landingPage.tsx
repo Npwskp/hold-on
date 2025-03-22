@@ -22,7 +22,7 @@ const LandingPage = () => {
           alt="Animated logo"
           width={1920}
           height={1080}
-          className="w-full max-w-[800px] h-auto absolute top-0 md:-top-20"
+          className="w-full max-w-[800px] h-auto absolute top-0 md:-top-10"
           unoptimized
         />
         <Image

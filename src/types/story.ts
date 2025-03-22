@@ -15,6 +15,11 @@ export type StoryPage = {
   isVideo?: boolean;
   parentPageId?: number;
   choicesId?: number;
+  animation?: {
+    type: 'typewriter';
+    speed?: number; // typing speed in milliseconds per character
+    delay?: number; // delay between each line in milliseconds
+  };
 };
 
 export type Chapter = {

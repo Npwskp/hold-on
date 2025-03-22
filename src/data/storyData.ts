@@ -39,6 +39,11 @@ export const storyData: Chapter[] = [
         id: 1,
         type: 'middleText',
         text: "เรื่องราวเกิดขึ้นในช่วงกลางเดือนเมษายน\nท่ามกลางเสียงหัวเราะและดนตรีดังกระหึ่ม",
+        animation: {
+          type: 'typewriter',
+          speed: 50,
+          delay: 500
+        }
       },
       {
         id: 2,
@@ -406,6 +411,11 @@ export const storyData: Chapter[] = [
         id: 44,
         type: 'middleText',
         text: "เสียงดนตรีถูกกลบด้วยเสียงกรีดร้อง\nรอยยิ้มของผู้คนกลับเปลี่ยนเป็นสีหน้าตื่นตระหนก",
+        animation: {
+          type: 'typewriter',
+          speed: 50,
+          delay: 500
+        }
       },
       {
         id: 45,
@@ -472,6 +482,11 @@ export const storyData: Chapter[] = [
         id: 53,
         type: 'middleText',
         text: "“รอก่อนนะ ไม่เป็นไร\nเดี๋ยวก็ถึงโรงพยาบาลแล้ว”",
+        animation: {
+          type: 'typewriter',
+          speed: 50,
+          delay: 500
+        }
       },
       {
         id: 54,
@@ -740,6 +755,11 @@ export const storyData: Chapter[] = [
         id: 29,
         type: 'middleText',
         text: "“รอก่อนนะ\nมันจะต้องมีทางอื่นๆที่ช่วยได้แน่”",
+        animation: {
+          type: 'typewriter',
+          speed: 50,
+          delay: 500
+        }
       },
       {
         id: 30,
@@ -888,16 +908,31 @@ export const storyData: Chapter[] = [
         id: 16,
         type: 'middleText',
         text: "“ทำได้แค่รอเท่านั้น”",
+        animation: {
+          type: 'typewriter',
+          speed: 50,
+          delay: 500
+        }
       },
       {
         id: 17,
         type: 'middleText',
         text: "คำของคุณหมอยังคงก้องดังอยู่ในหัว",
+        animation: {
+          type: 'typewriter',
+          speed: 50,
+          delay: 500
+        }
       },
       {
         id: 18,
         type: 'middleText',
         text: "ผมเกลียดการรอคอย\nเกลียดที่ตัวเองทำได้แค่นั้น",
+        animation: {
+          type: 'typewriter',
+          speed: 50,
+          delay: 500
+        }
       },
       {
         id: 19,

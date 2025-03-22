@@ -1,7 +1,6 @@
 import React from 'react'
 import { Noto_Sans_Thai } from 'next/font/google';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const notoSansThai = Noto_Sans_Thai({
   subsets: ['thai'],
@@ -31,14 +30,14 @@ const EndScene1 = () => {
         </div>
       </div>
       
-      <Link href="/chapter5/scene2" className='relative w-[95vw] max-w-[540px] aspect-square h-[50vh] flex flex-col items-center justify-end cursor-pointer'>
+      <div className='relative w-[95vw] max-w-[540px] aspect-square h-[50vh] flex flex-col items-center justify-end cursor-pointer'>
         <Image 
           src="/images/chapter5/Lin.gif"
           alt="Lin character"
           fill
           className="object-cover"
         />
-      </Link>
+      </div>
     </div>
   )
 }
