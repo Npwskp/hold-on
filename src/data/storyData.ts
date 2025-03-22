@@ -639,7 +639,7 @@ export const storyData: Chapter[] = [
         id: 17,
         type: 'custom',
         component: Fact2,
-        parentPageId: 12,
+        parentPageId: 13,
       },
       {
         id: 18,
@@ -690,7 +690,7 @@ export const storyData: Chapter[] = [
         id: 23,
         type: 'custom',
         component: Fact3,
-        parentPageId: 12,
+        parentPageId: 13,
       },
       {
         id: 24,

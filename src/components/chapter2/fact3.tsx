@@ -1,5 +1,6 @@
 import React from 'react'
 import { Noto_Sans_Thai } from 'next/font/google';
+import Image from 'next/image';
 
 const notoSansThai = Noto_Sans_Thai({
   subsets: ['thai'],
@@ -8,7 +9,14 @@ const notoSansThai = Noto_Sans_Thai({
 
 const Fact3 = () => {
   return (
-    <div className={`w-full min-h-[100dvh] flex flex-col items-center justify-center ${notoSansThai.className} text-white text-md md:text-xl`}>
+    <div className={`w-full min-h-[100dvh] flex flex-col items-center justify-center ${notoSansThai.className} text-white text-md md:text-xl relative`}>
+      <Image
+        src={"/images/fact/fact3.gif"}
+        alt="Background"
+        fill
+        priority={true}
+        className="object-cover z-0 absolute inset-0"
+      />
       <div className='flex flex-col justify-center gap-4 md:gap-6'>
         <p>ประเทศของเรา<u>จำเป็นต้องมี</u></p>
         <div className='flex flex-col gap-1 text-2xl md:text-4xl'>

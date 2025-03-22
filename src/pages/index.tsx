@@ -62,19 +62,22 @@ export default function StoryGame() {
   };
 
   return (
-    <div className="min-h-[100dvh] w-full bg-black">
-      {currentPage.type !== 'choice' && (
-        <div onClick={() => {
-          if (currentPage.parentPageId) {
-            progressTo(gameState.currentChapter, currentPage.parentPageId);
-          } else {
-            progressToNextPage();
-          }
-        }}>
-          {renderPageContent()}
-        </div>
-      )}
-      {currentPage.type === 'choice' && renderPageContent()}
+    <div className="min-h-[100dvh] w-full relative">
+      <div className="absolute inset-0 bg-black -z-10" />
+      <div className='w-full h-full max-w-[540px] mx-auto'>
+        {currentPage.type !== 'choice' && (
+          <div onClick={() => {
+            if (currentPage.parentPageId) {
+              progressTo(gameState.currentChapter, currentPage.parentPageId);
+            } else {
+              progressToNextPage();
+            }
+          }}>
+            {renderPageContent()}
+          </div>
+        )}
+        {currentPage.type === 'choice' && renderPageContent()}
+      </div>
     </div>
   );
 }
