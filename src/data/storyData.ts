@@ -1,5 +1,6 @@
 import LandingPage from '@/components/chapter0/landingPage';
 import Warning from '@/components/chapter0/warning';
+import SoundPermission from '@/components/chapter0/soundPermission';
 import { Chapter } from '../types/story';
 import Fact1 from '@/components/chapter1/fact1';
 import EmergencyScene from '@/components/chapter2/emergencyScene';
@@ -22,10 +23,15 @@ export const storyData: Chapter[] = [
       {
         id: 1,
         type: 'custom',
-        component: LandingPage,
+        component: SoundPermission,
       },
       {
         id: 2,
+        type: 'custom',
+        component: LandingPage,
+      },
+      {
+        id: 3,
         type: 'custom',
         component: Warning,
       },

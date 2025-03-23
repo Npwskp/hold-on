@@ -18,11 +18,16 @@ export const storySounds: StorySoundConfig = {
   // Chapter 0
   1: {
     1: {
-      bgm: ['/music/MainMenu.mp3'],
+      bgm: [],
       volume: 0.25,
       loop: true
     },
     2:{
+      bgm: ['/music/MainMenu.mp3'],
+      volume: 0.25,
+      loop: true
+    },
+    3:{
       bgm: ['/music/MainMenu.mp3'],
       volume: 0.25,
       loop: true
