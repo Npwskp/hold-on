@@ -3,6 +3,7 @@ class Sound {
   private volume: number;
   private isLoaded: boolean = false;
   private fadeInterval: NodeJS.Timeout | null = null;
+  private loadPromise: Promise<void>;
 
   constructor(src: string, volume: number = 1, loop: boolean = false) {
     this.audio = new Audio(src);
@@ -10,33 +11,44 @@ class Sound {
     this.audio.loop = loop;
     this.audio.volume = volume;
     
+    // Create a promise that resolves when the audio is loaded
+    this.loadPromise = new Promise((resolve) => {
+      this.audio.addEventListener('canplaythrough', () => {
+        this.isLoaded = true;
+        console.log('Audio loaded:', src);
+        resolve();
+      }, { once: true });
+    });
+
     // Preload the audio
     this.audio.load();
-    
-    // Set up load event
-    this.audio.addEventListener('canplaythrough', () => {
-      this.isLoaded = true;
-      console.log('Audio loaded:', src);
-    });
   }
 
-  async play() {
+  async ensureLoaded(): Promise<void> {
     if (!this.isLoaded) {
-      console.log('Waiting for audio to load:', this.audio.src);
-      await new Promise((resolve) => {
-        this.audio.addEventListener('canplaythrough', resolve, { once: true });
-      });
+      await this.loadPromise;
     }
-    this.audio.currentTime = 0;
-    return this.audio.play();
   }
 
-  stop() {
+  async play(): Promise<void> {
+    await this.ensureLoaded();
+    this.audio.currentTime = 0;
+    try {
+      await this.audio.play();
+    } catch (error) {
+      // Ignore autoplay errors, just log them
+      if (error instanceof Error && error.name === 'NotAllowedError') {
+        console.log('Autoplay blocked by browser policy');
+      }
+    }
+  }
+
+  stop(): void {
     this.audio.pause();
     this.audio.currentTime = 0;
   }
 
-  setVolume(volume: number) {
+  setVolume(volume: number): void {
     this.volume = volume;
     this.audio.volume = volume;
   }
@@ -126,12 +138,14 @@ class SoundManager {
     this.sounds.set(key, new Sound(src, volume, loop));
   }
 
-  playSound(key: string): void {
+  async playSound(key: string): Promise<void> {
     const sound = this.sounds.get(key);
     if (sound) {
-      sound.play().catch(error => {
+      try {
+        await sound.play();
+      } catch (error) {
         console.warn(`Failed to play sound ${key}:`, error);
-      });
+      }
     }
   }
 
@@ -139,6 +153,13 @@ class SoundManager {
     const sound = this.sounds.get(key);
     if (sound) {
       sound.stop();
+    }
+  }
+
+  setVolume(key: string, volume: number): void {
+    const sound = this.sounds.get(key);
+    if (sound) {
+      sound.setVolume(volume);
     }
   }
 
@@ -164,9 +185,9 @@ class SoundManager {
     }
   }
 
-  async stopBGM(): Promise<void> {
+  stopBGM(): void {
     if (this.currentBGM) {
-      await this.currentBGM.fadeOut();
+      this.currentBGM.stop();
       this.currentBGM = null;
       this.currentBGMKey = null;
     }
@@ -176,13 +197,6 @@ class SoundManager {
     this.sounds.forEach(sound => sound.stop());
     this.currentBGM = null;
     this.currentBGMKey = null;
-  }
-
-  setVolume(key: string, volume: number): void {
-    const sound = this.sounds.get(key);
-    if (sound) {
-      sound.setVolume(volume);
-    }
   }
 }
 
