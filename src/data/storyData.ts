@@ -1,6 +1,5 @@
 import LandingPage from '@/components/chapter0/landingPage';
 import Warning from '@/components/chapter0/warning';
-import StoryPage2 from '@/components/chapter1/storyPage2';
 import { Chapter } from '../types/story';
 import Fact1 from '@/components/chapter1/fact1';
 import EmergencyScene from '@/components/chapter2/emergencyScene';
@@ -13,6 +12,7 @@ import Fact7 from '@/components/chapter3/fact7';
 import EndScene1 from '@/components/chapter5/endScene1';
 import EndScene2 from '@/components/chapter5/endScene2';
 import EndChapterScence from '@/components/chapter4/endChapterScence';
+import dynamic from 'next/dynamic';
 
 export const storyData: Chapter[] = [
   {
@@ -48,7 +48,7 @@ export const storyData: Chapter[] = [
       {
         id: 2,
         type: 'custom',
-        component: StoryPage2,
+        component: dynamic(() => import('@/components/chapter1/storyPage2')),
       },
       {
         id: 3,
@@ -585,7 +585,7 @@ export const storyData: Chapter[] = [
       {
         id: 11,
         type: 'dialogue',
-        text: "เลือดในคลังเราเหลือไม่มากพอจะทำการผ่าตัดให้เธอได้ทันที",
+        text: "เลือดในคลังเรามีไม่พอใช้อยู่แล้ว ยิ่งกับอุบัติเหตุใหญ่กระทันหันแบบนี้อีก",
         backgroundImage: "/images/chapter2/EmergencyRoom.png",
         characterImage: "/images/chapter2/Doctor4.png",
         characterName: "คุณหมอ",
