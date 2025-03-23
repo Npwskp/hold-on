@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import HamburgerMenu from '../common/HamburgerMenu'
-
 import { Mali } from 'next/font/google';
 
 const mali = Mali({
@@ -33,6 +32,7 @@ const LandingPage = () => {
           className="w-full md:max-w-[540px] aspect-[1/1.5] object-cover object-bottom absolute bottom-0"
           unoptimized
         />
+
         <div className={`text-center text-white text-2xl md:text-4xl font-bold absolute bottom-[60px] md:bottom-[100px] w-full flex justify-center items-center ${mali.className}`}>
           กดที่หน้าจอเพื่อเริ่มเกม
         </div>

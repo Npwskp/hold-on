@@ -71,6 +71,7 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
       // Check if the BGM is different from the previous page
       const previousPageSound = chapterSounds?.[pageId - 1];
       const isSameBGM = previousPageSound?.bgm?.[0] === currentPageSound.bgm?.[0];
+      console.log(currentPageSound,nextPageSound);
 
       // Load and play background music only if it's different from previous page
       if (currentPageSound.bgm && !isSameBGM) {
@@ -81,7 +82,7 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
       } else if (nextPageSound && nextPageSound.bgm?.[0] !== currentPageSound?.bgm?.[0]) {
         console.log('Next page has different BGM, fading out current BGM');
         soundManager.stopBGM();
-      } else if (!currentPageSound.bgm) {
+      } else if (!nextPageSound) {
         // If no BGM is specified for this page, stop any playing BGM
         soundManager.stopBGM();
       }

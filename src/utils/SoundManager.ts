@@ -186,8 +186,9 @@ class SoundManager {
   }
 
   stopBGM(): void {
+    console.log('stopBGM');
     if (this.currentBGM) {
-      this.currentBGM.stop();
+      this.currentBGM.fadeOut();
       this.currentBGM = null;
       this.currentBGMKey = null;
     }
