@@ -25,6 +25,14 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
       return;
     }
 
+    // Stop all SFX when changing pages
+    if (currentPageSound?.sfx) {
+      currentPageSound.sfx.forEach((sfxSrc, index) => {
+        const key = `sfx_${chapterId}_${pageId}_${index}`;
+        soundManager.stopSound(key);
+      });
+    }
+
     if (currentPageSound) {
       // Check if the BGM is different from the previous page
       const previousPageSound = chapterSounds?.[pageId - 1];
@@ -43,6 +51,9 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
           );
           soundManager.playBGM(key);
         });
+      } else if (nextPageSound && nextPageSound.bgm?.[0] !== currentPageSound?.bgm?.[0]) {
+        console.log('Next page has different BGM, fading out current BGM');
+        soundManager.stopBGM();
       } else if (!currentPageSound.bgm) {
         // If no BGM is specified for this page, stop any playing BGM
         soundManager.stopBGM();
@@ -82,18 +93,6 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
           }
         });
       }
-
-      // Stop SFX that don't exist in next page
-      if (nextPageSound?.sfx) {
-        const currentSfx = currentPageSound.sfx || [];
-        const nextPageSfx = nextPageSound.sfx;
-        currentSfx.forEach((sfxSrc, index) => {
-          const key = `sfx_${chapterId}_${pageId}_${index}`;
-          if (!nextPageSfx.includes(sfxSrc)) {
-            soundManager.stopSound(key);
-          }
-        });
-      }
     } else {
       // If no sound config for this page, stop all sounds
       console.log('No sound config for page, stopping all sounds');
@@ -102,21 +101,12 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
 
     // Cleanup function
     return () => {
-      // Check if next page exists and has different BGM
-      if (nextPageSound && nextPageSound.bgm?.[0] !== currentPageSound?.bgm?.[0]) {
-        console.log('Next page has different BGM, fading out current BGM');
-        soundManager.stopBGM();
-      }
-
-      // Stop current page's SFX if they don't exist in next page
+      // Stop all SFX when unmounting or changing pages
       if (currentPageSound?.sfx) {
         currentPageSound.sfx.forEach((sfxSrc, index) => {
           const key = `sfx_${chapterId}_${pageId}_${index}`;
-          // Stop if next page doesn't exist or doesn't have this SFX
-          if (!nextPageSound?.sfx?.includes(sfxSrc)) {
-            console.log('Stopping SFX:', { key, sfxSrc });
-            soundManager.stopSound(key);
-          }
+          console.log('Stopping SFX in cleanup:', { key, sfxSrc });
+          soundManager.stopSound(key);
         });
       }
     };
