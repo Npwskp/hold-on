@@ -18,7 +18,7 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
     // Get sound config for current chapter and page
     const chapterSounds = storySounds[chapterId];
     const currentPageSound = chapterSounds?.[pageId];
-    const nextPageSound = chapterSounds?.[pageId + 1];
+    const nextPageSound = chapterSounds?.[pageId + 1] || storySounds[chapterId + 1]?.[0];
 
     // Stop all sounds when changing chapters
     if (!chapterSounds) {
