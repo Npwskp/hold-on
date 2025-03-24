@@ -112,14 +112,6 @@ class Sound {
       }, 16); // Update every 16ms (approximately 60fps)
     });
   }
-
-  isPlaying(): boolean {
-    return !this.audio.paused;
-  }
-
-  getSource(): string {
-    return this.audio.src;
-  }
 }
 
 class SoundManager {
@@ -127,8 +119,6 @@ class SoundManager {
   private sounds: Map<string, Sound> = new Map();
   private currentBGM: Sound | null = null;
   private currentBGMKey: string | null = null;
-  private sfxPool: Map<string, Sound[]> = new Map(); // Pool for SFX instances
-  private maxPoolSize: number = 3; // Maximum instances per SFX
 
   private constructor() {}
 
@@ -140,54 +130,22 @@ class SoundManager {
   }
 
   loadSound(key: string, src: string, volume: number = 1, loop: boolean = false): void {
-    // For SFX, manage pool
-    if (key.startsWith('sfx_')) {
-      if (!this.sfxPool.has(src)) {
-        this.sfxPool.set(src, []);
-      }
-      // Create initial instance
-      const sound = new Sound(src, volume, loop);
-      this.sounds.set(key, sound);
-      
-      // Pre-create pool instances for mobile
-      const pool = this.sfxPool.get(src)!;
-      while (pool.length < this.maxPoolSize) {
-        pool.push(new Sound(src, volume, loop));
-      }
-    } else {
-      // BGM handling remains the same
-      if (this.sounds.has(key)) {
-        this.stopSound(key);
-        this.sounds.delete(key);
-      }
-      this.sounds.set(key, new Sound(src, volume, loop));
+    // Stop and remove old sound if it exists
+    if (this.sounds.has(key)) {
+      this.stopSound(key);
+      this.sounds.delete(key);
     }
+    this.sounds.set(key, new Sound(src, volume, loop));
   }
 
   async playSound(key: string): Promise<void> {
     const sound = this.sounds.get(key);
-    if (!sound) return;
-
-    try {
-      // For SFX, use pooling
-      if (key.startsWith('sfx_')) {
-        const src = sound.getSource();
-        const pool = this.sfxPool.get(src);
-        if (pool) {
-          // Find an available instance or the oldest one
-          const availableSound = pool.find(s => !s.isPlaying()) || pool[0];
-          if (availableSound) {
-            availableSound.stop(); // Ensure it's stopped
-            await availableSound.play();
-            return;
-          }
-        }
+    if (sound) {
+      try {
+        await sound.play();
+      } catch (error) {
+        console.warn(`Failed to play sound ${key}:`, error);
       }
-      
-      // Default to normal playback for BGM or if pool is unavailable
-      await sound.play();
-    } catch (error) {
-      console.warn(`Failed to play sound ${key}:`, error);
     }
   }
 
