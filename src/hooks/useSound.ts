@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import SoundManager from '../utils/SoundManager';
 import { storySounds } from '../config/soundConfig';
 
@@ -10,34 +10,26 @@ interface UseSoundProps {
 export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
   const soundManager = SoundManager.getInstance();
 
-  useEffect(() => {
-    let isActive = true; // Track if the effect is still active
-    
+  // Use useRef to persist the Map across renders
+  const activeSFXKeys = useRef(new Map<string, string>());
+
+  useEffect(() => {    
     console.log('Sound effect triggered:', { chapterId, pageId });
     
     // Get sound config for current chapter and page
     const chapterSounds = storySounds[chapterId];
     const currentPageSound = chapterSounds?.[pageId];
+    const previousPageSound = chapterSounds?.[pageId - 1];
     const nextPageSound = chapterSounds?.[pageId + 1] || storySounds[chapterId + 1]?.[0];
 
     // Stop all sounds when changing chapters
     if (!chapterSounds) {
-      console.log('No sound config for chapter, stopping all sounds');
+      console.log('No sound config for chapter, stopping all sounds')
       soundManager.stopAll();
       return;
     }
 
-    // Stop all SFX when changing pages
-    if (currentPageSound?.sfx) {
-      currentPageSound.sfx.forEach((sfxSrc, index) => {
-        const key = `sfx_${chapterId}_${pageId}_${index}`;
-        soundManager.stopSound(key);
-      });
-    }
-
     const playBGM = async (key: string, bgmSrc: string, volume: number, loop: boolean) => {
-      if (!isActive) return; // Don't play if effect is no longer active
-      
       console.log('Loading BGM:', { key, bgmSrc });
       soundManager.loadSound(key, bgmSrc, volume, loop);
       
@@ -52,8 +44,6 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
     };
 
     const playSFX = async (key: string, sfxSrc: string, volume: number, loop: boolean) => {
-      if (!isActive) return; // Don't play if effect is no longer active
-      
       console.log('Loading SFX:', { key, sfxSrc });
       soundManager.loadSound(key, sfxSrc, volume, loop);
       
@@ -69,9 +59,7 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
 
     if (currentPageSound) {
       // Check if the BGM is different from the previous page
-      const previousPageSound = chapterSounds?.[pageId - 1];
       const isSameBGM = previousPageSound?.bgm?.[0] === currentPageSound.bgm?.[0];
-      console.log(currentPageSound,nextPageSound);
 
       // Load and play background music only if it's different from previous page
       if (currentPageSound.bgm && !isSameBGM) {
@@ -87,20 +75,18 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
         soundManager.stopBGM();
       }
 
-      // Load and play sound effects
       if (currentPageSound.sfx) {
         currentPageSound.sfx.forEach((sfxSrc, index) => {
           const key = `sfx_${chapterId}_${pageId}_${index}`;
           
           // Special handling for typing sound - always replay on page change
-          if (sfxSrc === '/effect/Typing.mp3') {
+          if (sfxSrc === '/effect/Typing.ogg') {
             playSFX(key, sfxSrc, currentPageSound.volume || 1, false);
           } else {
-            // Check if this SFX exists in next page
-            const nextPageSfx = nextPageSound?.sfx || [];
-            const isSfxInNextPage = nextPageSfx.includes(sfxSrc);
-            
-            if (!isSfxInNextPage) {
+            const wasInPreviousPage = previousPageSound?.sfx?.includes(sfxSrc);
+            if (!wasInPreviousPage) {
+              // Use .current to access the Map
+              activeSFXKeys.current.set(sfxSrc, key);
               playSFX(key, sfxSrc, currentPageSound.volume || 1, false);
             }
           }
@@ -114,13 +100,22 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
 
     // Cleanup function
     return () => {
-      isActive = false; // Mark effect as inactive
-      // Stop all SFX when unmounting or changing pages
       if (currentPageSound?.sfx) {
         currentPageSound.sfx.forEach((sfxSrc, index) => {
-          const key = `sfx_${chapterId}_${pageId}_${index}`;
-          console.log('Stopping SFX in cleanup:', { key, sfxSrc });
-          soundManager.stopSound(key);
+          // Use .current to access the Map
+          const originalKey = activeSFXKeys.current.get(sfxSrc);
+          if (originalKey) {
+            const nextPageHasSFX = nextPageSound?.sfx?.includes(sfxSrc);
+            if (!nextPageHasSFX) {
+              soundManager.stopSound(originalKey);
+              activeSFXKeys.current.delete(sfxSrc);
+            }
+          }
+          
+          if (sfxSrc === '/effect/Typing.ogg') {
+            const key = `sfx_${chapterId}_${pageId}_${index}`;
+            soundManager.stopSound(key);
+          }
         });
       }
     };
