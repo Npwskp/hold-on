@@ -111,20 +111,18 @@ function AppContent({ Component, ...props }: AppProps) {
 
     const loadResources = async () => {
       // Load critical resources first
-      await preloadResources(criticalResources, (progress) => {
-        setLoadingProgress(progress * 20); // First 20% for critical resources
-      });
+      await preloadResources(criticalResources);
+      setLoadingProgress(20); // First 20% for critical resources
 
       // Load remaining resources in background
       const totalChapters = Object.keys(chapterResources).length;
       let loadedChapters = 0;
 
       for (const [, resources] of Object.entries(chapterResources)) {
-        await preloadResources(resources, (progress) => {
-          const chapterProgress = (loadedChapters + progress) / totalChapters;
-          setLoadingProgress(20 + (chapterProgress * 80)); // Remaining 80% for other resources
-        });
+        await preloadResources(resources);
         loadedChapters++;
+        const chapterProgress = loadedChapters / totalChapters;
+        setLoadingProgress(20 + (chapterProgress * 80)); // Remaining 80% for other resources
       }
 
       setIsLoading(false);
