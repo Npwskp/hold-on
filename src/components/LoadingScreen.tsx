@@ -14,17 +14,19 @@ const LoadingScreen = ({ progress }: LoadingScreenProps) => {
             <div className="absolute top-0 left-0 w-24 h-24 rounded-full border-4 border-blue-500 border-t-transparent animate-spin"></div>
           </div>
         </div>
-        <div className="space-y-2">
-          <p className="text-xl font-medium text-white">Loading resources...</p>
-          <p className="text-sm text-gray-400">Please wait while we prepare your experience</p>
+        <div className="flex flex-col items-center justify-center gap-2">
+          <div className="space-y-2">
+            <p className="text-xl font-medium text-white">Loading resources...</p>
+            <p className="text-sm text-gray-400">Please wait while we prepare your experience</p>
+          </div>
+          <div className="w-full h-1 bg-gray-700 rounded-full overflow-hidden">
+            <div 
+              className="h-full bg-blue-500 transition-all duration-300" 
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+          <p className="text-sm text-gray-400">{Math.round(progress)}% loaded</p>
         </div>
-        <div className="w-48 h-1 bg-gray-700 rounded-full overflow-hidden">
-          <div 
-            className="h-full bg-blue-500 transition-all duration-300" 
-            style={{ width: `${progress}%` }}
-          />
-        </div>
-        <p className="text-sm text-gray-400">{Math.round(progress)}% loaded</p>
       </div>
     </div>
   );
