@@ -79,9 +79,14 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
         currentPageSound.sfx.forEach((sfxSrc, index) => {
           const key = `sfx_${chapterId}_${pageId}_${index}`;
           
-          // Special handling for typing sound - always replay on page change
+          // Special handling for typing sound - always replay on page change with configured typing time
           if (sfxSrc === '/effect/Typing.ogg') {
+            const typingTime = currentPageSound.typeingTime || 3000; // Default to 3000ms if not specified
             playSFX(key, sfxSrc, currentPageSound.volume || 1, false);
+            // Stop the typing sound after the configured typing time
+            setTimeout(() => {
+              soundManager.stopSound(key);
+            }, typingTime);
           } else {
             const wasInPreviousPage = previousPageSound?.sfx?.includes(sfxSrc);
             if (!wasInPreviousPage) {

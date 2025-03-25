@@ -3,6 +3,7 @@ export interface SoundConfig {
   sfx?: string[];      // Sound effect
   volume?: number;     // Volume level (0-1)
   loop?: boolean;      // Whether to loop the sound
+  typeingTime?: number; // Time to play typing sound
 }
 
 export interface ChapterSoundConfig {
@@ -37,12 +38,14 @@ export const storySounds: StorySoundConfig = {
     1: {
       bgm: [],
       sfx: ['/effect/Typing.ogg'],
+      typeingTime: 5000,
       volume: 0.25,
       loop: true
     },
     2: {
       bgm: [],
       sfx: ['/effect/Typing.ogg'],
+      typeingTime: 7200,
       volume: 0.25,
       loop: true
     },
@@ -295,6 +298,7 @@ export const storySounds: StorySoundConfig = {
     44: {
       bgm: [],
       sfx: ['/effect/Typing.ogg','/effect/Scream.ogg'],
+      typeingTime: 7000,
       volume: 0.25,
       loop: true
     },
@@ -629,18 +633,21 @@ export const storySounds: StorySoundConfig = {
     16: {
       bgm: [],
       sfx: ['/effect/Typing.ogg'],
+      typeingTime: 1500,
       volume: 0.25,
       loop: true
     },
     17: {
       bgm: [],
       sfx: ['/effect/Typing.ogg'],
+      typeingTime: 2000,
       volume: 0.25,
       loop: true
     },
     18: {
       bgm: [],
       sfx: ['/effect/Typing.ogg'],
+      typeingTime: 3000,
       volume: 0.25,
       loop: true
     }
