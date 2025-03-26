@@ -56,8 +56,11 @@ const DialogueTemplate: React.FC<DialogueTemplateProps> = ({ storyData, chapterI
       {storyData.text && (
         <div className={`flex flex-col justify-center p-8 md:p-14 relative mb-[5vh] w-[85%] md:w-[90%] aspect-[21/8] ${chapterId == 4 ? 'bg-gray-custom/90' : 'bg-white/90'} rounded-lg ${mali.className} z-20`}>
           {storyData.isCharacterDialogue && (
-            <div className="absolute -top-8 md:-top-10 left-[5%] bg-black/90 w-[30%] md:w-[150px] aspect-[20/9] rounded-xl flex justify-center items-center z-30">
-              <h2 className="text-xl md:text-2xl z-40">{storyData.characterName}</h2>
+            <div className="absolute -top-8 md:-top-10 left-[5%] w-[30%] md:w-[150px] aspect-[20/9] rounded-xl z-50">
+              <div className="absolute inset-0 bg-black rounded-xl" style={{ opacity: 0.9 }}></div>
+              <div className="relative flex justify-center items-center h-full">
+                <h2 className="text-xl md:text-2xl text-white">{storyData.characterName}</h2>
+              </div>
             </div>
           )}
           <div className={`${chapterId == 4 ? 'text-white' : 'text-black'} text-lg md:text-xl ${storyData.isCharacterDialogue ? '' : 'text-center'} relative z-20`}>
