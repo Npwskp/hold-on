@@ -630,32 +630,26 @@ export const storySounds: StorySoundConfig = {
       loop: true
     },
     15: {
-      bgm: ['/music/Waiting.mp3'],
-      sfx: [],
-      volume: 0.25,
-      loop: true
-    },
-    16: {
       bgm: [],
       sfx: ['/effect/Typing.ogg'],
       typeingTime: 1500,
       volume: 0.25,
       loop: true
     },
-    17: {
+    16: {
       bgm: [],
       sfx: ['/effect/Typing.ogg'],
       typeingTime: 2000,
       volume: 0.25,
       loop: true
     },
-    18: {
+    17: {
       bgm: [],
       sfx: ['/effect/Typing.ogg'],
       typeingTime: 3000,
       volume: 0.25,
       loop: true
-    }
+    },
   },
   5: {
     1: {

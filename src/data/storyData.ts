@@ -802,63 +802,58 @@ export const storyData: Chapter[] = [
       },
       {
         id: 4,
-        type: 'dialogue',
-        backgroundImage: "/images/chapter3/PhoneWithScene.png",
-      },
-      {
-        id: 5,
         type: 'choice',
         backgroundImage: "/images/chapter3/MedicalRoom.png",
         choices: [
           {
             id: 1,
-            text: "ติดต่อญาติของลินที่อาจจะมีเลือดกรุ๊ปตรงกันและมาช่วยได้",
-            nextPageId: 6
+            text: "ติดต่อญาติของลิน\nที่อาจจะมีเลือดกรุ๊ปตรงกันและมาช่วยได้",
+            nextPageId: 5
           },
           {
             id: 2,
-            text: "โพสต์ขอความช่วยเหลือผ่านโซเชียลมีเดีย",
-            nextPageId: 8
+            text: "โพสต์ขอความช่วยเหลือ\nผ่านโซเชียลมีเดีย",
+            nextPageId: 7
           },
           {
             id: -1,
-            text: "นั่งรอต่อไป ตามที่หมอบอก",
-            nextPageId: 10
+            text: "นั่งรอต่อไป\nตามที่หมอบอก",
+            nextPageId: 9
           }
         ]
       },
       {
-        id: 6,
+        id: 5,
         type: 'custom',
         component: Fact5
       },
       {
-        id: 7,
+        id: 6,
         type: 'dialogue',
         text: "ไม่ไหวแฮะ คุณหมอก็บอกแล้วด้วยว่าผู้บริจาคต้องสุขภาพแข็งแรง และเตรียมตัวมาอย่างดี ต่อให้มาได้จริงก็อาจบริจาคไม่ได้ ",
         backgroundImage: "/images/chapter3/Hallway.png",
         characterImage: "/images/chapter3/Kit2-2.png",
         characterName: "กิต",
         isCharacterDialogue: true,
-        parentPageId: 5
+        parentPageId: 4
       },
       {
-        id: 8,
+        id: 7,
         type: 'custom',
         component: Fact6
       },
       {
-        id: 9,
+        id: 8,
         type: 'dialogue',
         text: "ไม่ไหวแฮะ การที่เราจะช่วยลินได้นั้น ต้องมาจากคลังเลือดสำรองเท่านั้น การที่เราโพสต์ขอความช่วยเหลือผ่านโซเชียลมีเดีย ไม่ใช่เรื่องที่ต้องทำในตอนนี้",
         backgroundImage: "/images/chapter3/Hallway.png",
         characterImage: "/images/chapter3/Kit2-2.png",
         characterName: "กิต",
         isCharacterDialogue: true,
-        parentPageId: 5
+        parentPageId: 4
       },
       {
-        id: 10,
+        id: 9,
         type: 'dialogue',
         text: "ผมตัดสินใจนั่งรอต่อไป เพราะรู้ว่าตัวเองคงทำอะไรไม่ได้จริงๆ",
         backgroundImage: "/images/chapter3/Hallway.png",
@@ -867,14 +862,14 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: true
       },
       {
-        id: 11,
+        id: 10,
         type: 'dialogue',
         backgroundImage: "/images/chapter3/CutScene5.gif",
         characterName: "กิต",
         isCharacterDialogue: false
       },
       {
-        id: 12,
+        id: 11,
         type: 'dialogue',
         text: "ในระหว่างนั้นก็ได้เห็นกลุ่มคนข้างๆ นั่งลงร้องไห้หลังจากได้คุยกับคุณหมอ",
         backgroundImage: "/images/chapter3/CutScene5.gif",
@@ -882,7 +877,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: false
       },
       {
-        id: 13,
+        id: 12,
         type: 'dialogue',
         text: "บรรยากาศโรงพยาบาลตอนนี้มีแต่ความสับสนวุ่นวาย และความโศกเศร้า",
         backgroundImage: "/images/chapter3/CutScene5.gif",
@@ -890,7 +885,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: false
       },
       {
-        id: 14,
+        id: 13,
         type: 'dialogue',
         text: "ทุกภาพและเสียงรอบตัวมันกำลังทำให้ผมแทบเสียสติไปทุกที",
         backgroundImage: "/images/chapter3/CutScene5.gif",
@@ -898,7 +893,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: false
       },
       {
-        id: 15,
+        id: 14,
         type: 'dialogue',
         text: "ผมปิดหูก้มหน้าหลับตาลง ไม่อยากรับรู้อะไรอีกแล้ว",
         backgroundImage: "/images/chapter3/CutScene5.gif",
@@ -906,7 +901,7 @@ export const storyData: Chapter[] = [
         isCharacterDialogue: false
       },
       {
-        id: 16,
+        id: 15,
         type: 'middleText',
         text: "“ทำได้แค่รอเท่านั้น”",
         animation: {
@@ -916,9 +911,9 @@ export const storyData: Chapter[] = [
         }
       },
       {
-        id: 17,
+        id: 16,
         type: 'middleText',
-        text: "คำของคุณหมอยังคงก้องดังอยู่ในหัว",
+        text: "คำขอของคุณหมอยังคงก้องดังอยู่ในหัว",
         animation: {
           type: 'typewriter',
           speed: 50,
@@ -926,7 +921,7 @@ export const storyData: Chapter[] = [
         }
       },
       {
-        id: 18,
+        id: 17,
         type: 'middleText',
         text: "ผมเกลียดการรอคอย\nเกลียดที่ตัวเองทำได้แค่นั้น",
         animation: {
@@ -936,7 +931,7 @@ export const storyData: Chapter[] = [
         }
       },
       {
-        id: 19,
+        id: 18,
         type: 'custom',
         component: Fact7
       }

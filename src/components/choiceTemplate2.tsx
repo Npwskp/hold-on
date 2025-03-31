@@ -29,7 +29,7 @@ const ChoiceTemplate2: React.FC<ChoiceTemplate2Props> = ({ storyData, onChoiceSe
       {/* Phone layer */}
       <div className="absolute inset-0">
         <img
-          src={"/images/chapter3/PhoneAndHandCrop.png"}
+          src={"/images/chapter3/PhoneWithHandNew.png"}
           alt="Phone"
           className="h-full object-cover mx-auto"
         />
@@ -37,7 +37,7 @@ const ChoiceTemplate2: React.FC<ChoiceTemplate2Props> = ({ storyData, onChoiceSe
 
       {/* Choices layer */}
       <div className={`${mali.className} relative flex flex-col justify-center items-center w-full h-full px-8 md:px-3`}>
-				<div className="w-[80vw] md:w-[350px] h-[80vh] bg-white/90 rounded-lg flex flex-col justify-center items-center gap-[8vh]">
+				<div className="w-[80%] md:w-[280px] h-[68%] bg-white/90 rounded-lg flex flex-col justify-center items-center gap-[8vh]">
 					{storyData.choices?.map((choice, index) => (
 						<button
 							key={index}
@@ -50,13 +50,18 @@ const ChoiceTemplate2: React.FC<ChoiceTemplate2Props> = ({ storyData, onChoiceSe
 								}
 							}}
 							disabled={selectedChoice.includes(choice.nextPageId)}
-							className={`w-[60vw] md:w-[300px] h-[15vh] py-2 px-4 text-white rounded-lg transition-colors duration-200 text-lg md:text-xl leading-tight ${
+							className={`w-[80%] md:w-[250px] h-[20%] py-2 px-4 text-white rounded-lg transition-colors duration-200 text-md ${
 								selectedChoice.includes(choice.nextPageId)
 									? 'bg-black/40 cursor-not-allowed'
 									: 'bg-black/90 hover:bg-black/80'
 							}`}
 						>
-							{choice.text}
+							{choice.text.split('\n').map((line, i) => (
+								<React.Fragment key={i}>
+									{line}
+									{i < choice.text.split('\n').length - 1 && <br />}
+								</React.Fragment>
+							))}
 						</button>
 					))}
 				</div>
