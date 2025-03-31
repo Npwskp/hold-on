@@ -21,12 +21,12 @@ const Fact6 = () => {
         <div className='flex flex-row w-full justify-between items-end text-lg md:text-2xl'>
           <p>ทางศูนย์บริจาคโลหิตแห่งชาติ</p>
           <Image
-            src={"/images/fact/Bloodlogo.png"}
+            src={"/images/credits/BloodlogoWhite.png"}
             alt="Background"
             width={150}
             height={150}
             priority={true}
-            className="object-cover w-[100px] md:w-[150px] aspect-square"
+            className="object-cover w-[50px] md:w-[100px] aspect-[2/3] me-4"
           />
         </div>
         <div className='flex flex-col gap-1 border-l-2 pl-4 md:pl-8 text-2xl md:text-3xl max-w-[320px] md:max-w-[540px]'>

@@ -49,7 +49,7 @@ const DialogueTemplate: React.FC<DialogueTemplateProps> = ({ storyData, chapterI
           width={500} 
           height={500}
           priority={true}
-          className="w-[40%] md:w-[50%] h-auto me-28 md:me-40 z-10 relative"
+          className="w-[60%] h-auto me-28 md:me-40 z-10 relative"
         />
       )}
       

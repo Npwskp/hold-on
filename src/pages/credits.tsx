@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { Noto_Sans_Thai, Mali } from 'next/font/google';
+import { Noto_Sans_Thai, Mali, Sarabun } from 'next/font/google';
 import HamburgerMenu from '@/components/common/HamburgerMenu';
 
 const notoSansThai = Noto_Sans_Thai({
@@ -12,6 +12,11 @@ const notoSansThai = Noto_Sans_Thai({
 const mali = Mali({
   subsets: ['latin'],
   weight: ['400', '700'],
+});
+
+const sarabun = Sarabun({
+  subsets: ['thai'],
+  weight: ['300', '700'],
 });
 
 type CreditPage = {
@@ -55,75 +60,72 @@ const FirstCreditPage = () => (
 );
 
 const SecondCreditPage = () => (
-  <div className={`h-[100vh] w-full bg-black text-white ${notoSansThai.className} flex flex-col items-center justify-center`}>
+  <div className={`h-[100vh] w-full bg-black text-white ${sarabun.className} flex flex-col items-center justify-center`}>
     <HamburgerMenu />
     <div className="flex flex-col items-center justify-center h-full w-full max-w-[540px] px-8 md:px-16">
-      <h1 className={`text-3xl font-bold mb-8 ${mali.className}`}>เครดิต</h1>
-      <div className="w-full px-4 md:px-8 py-1 md:py-4">
+      <h1 className={`text-2xl font-bold px-2 md:px-6 mb-4 text-start w-full`}>เครดิต</h1>
+      <div className="w-full px-2 md:px-6 py-1 md:py-2">
         <div>
-          <p className="text-lg mb-2 w-full">ผลงานนวัตกรรมสื่อสารเชิงพหุสื่อ</p>
-          <div className='flex flex-row justify-start gap-2 w-full'>
-            <div>
-              <p>จิรัชญา</p>
-              <p>กิตติพงษ์</p>
-              <p>ณชร</p>
-            </div>
-            <div>
-              <p>เฟื่องทิพย์</p>
-              <p>แสงกระจ่าง</p>
-              <p>พฤทธิกุล</p>
-            </div>
-          </div>
-          <div className='border-l-2 border-white pl-4 m-8'>
-            <p>นิสิตจาก</p>
-            <p>วิทยาลัยนวัตกรรมสื่อสารสังคม</p>
-            <p>เอกการสื่อสารเพื่อสุขภาพ</p>
-            <p>มหาวิทยาลัยศรีนครินทรวิโรฒ</p>
+          <div className="text-md mb-4 w-full">
+            <p>ผลงานนี้เป็นผลงานนวัตกรรมสื่อสารนิพนธ์</p>
+            <p>ของ จิรัชญา เฟื่องทิพย์ , กิตติพงษ์ แสงกระจ่าง  และ
+            ณชร พฤทธิกุล นิสิตจากวิทยาลัยนวัตกรรมสื่อสารสังคม
+            เอกการสื่อสารเพื่อสุขภาพ มหาวิทยาลัยศรีนครินทรวิโรฒ </p>
           </div>
           <div className='flex flex-row justify-between items-start gap-2'>
             <div className=''>
-                <div>
-                  <p>โครงเรื่อง</p>
-                  <br/>
-                  <br/>
+                <div className='flex flex-col gap-6'>
+                  <div>
+                    <p>โครงเรื่อง</p>
+                    <br/>
+                    <br/>
+                  </div>
                   <p>บทบรรยาย</p>
                   <p>ภาพประกอบ</p>
                   <p>เสียงประกอบ</p>
+                </div>
+            </div>
+            <div className='flex flex-row justify-start gap-2'>
+              <div className='flex flex-col gap-6'>
+                <div>
+                  <p>จิรัชญา</p>
+                  <p>กิตติพงษ์</p>
+                  <p>ณชร</p>
+                </div>
+                <p>จิรัชญา</p>
+                <p>จิรัชญา</p>
+                <p>ณชร</p>
+              </div>
+              <div className='flex flex-col gap-6'>
+                <div>
+                  <p>เฟื่องทิพย์</p>
+                  <p>แสงกระจ่าง</p>
+                  <p>พฤทธิกุล</p>
+                </div>
+                <p>เฟื่องทิพย์</p>
+                <p>เฟื่องทิพย์</p>
+                <p>พฤทธิกุล</p>
+              </div>
+            </div>
+          </div>
+          <p className='text-center w-full'> ( ขอบคุณเสียงประกอบจาก envato.co ) </p>
+          <div className='flex flex-row justify-between items-start gap-2'>
+            <div className=''>
+                <div className='flex flex-col gap-6'>
                   <p>พัฒนา</p>
                 </div>
             </div>
             <div className='flex flex-row justify-start gap-2'>
-              <div>
-                <p>จิรัชญา</p>
-                <p>กิตติพงษ์</p>
-                <p>ณชร</p>
-                <p>จิรัชญา</p>
-                <p>จิรัชญา</p>
-                <p>ณชร</p>
-                <p>ณพวิทย์</p>
-              </div>
-              <div>
-                <p>เฟื่องทิพย์</p>
-                <p>แสงกระจ่าง</p>
-                <p>พฤทธิกุล</p>
-                <p>เฟื่องทิพย์</p>
-                <p>เฟื่องทิพย์</p>
-                <p>พฤทธิกุล</p>
-                <p>ศุกลปักษ์</p>
-              </div>
-            </div>
-          </div>
-          <div className='flex flex-row justify-between items-start gap-2 mt-4'>
-            <div>
-              ข้อมูล
-            </div>
-            <div>
-              <p>ศูนย์บริการโลหิตแห่งชาติ</p>
-              <p>สภากาชาดไทย</p>
+                <p className='me-1'>ณพวิทย์</p>
+                <p className='me-4'>ศุกลปักษ์</p>
             </div>
           </div>
         </div>
       </div>
+
+      <p className='text-center mt-8 font-bold'>
+        ขอบคุณหน่วยงานที่ให้ความอนุเคราะห์ข้อมูล
+      </p>
 
       <p className="text-center mt-8">
         ขอขอบคุณทีมงานทุกท่านที่มีส่วนร่วมในผลงานนี้

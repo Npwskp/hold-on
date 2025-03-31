@@ -11,7 +11,6 @@ import Fact6 from '@/components/chapter3/fact6';
 import Fact7 from '@/components/chapter3/fact7';
 import EndScene1 from '@/components/chapter5/endScene1';
 import EndScene2 from '@/components/chapter5/endScene2';
-import EndChapterScence from '@/components/chapter4/endChapterScence';
 import dynamic from 'next/dynamic';
 import EmergencyScene1 from '@/components/chapter2/emergencyScene1';
 import EmergencyScene2 from '@/components/chapter2/emergencyScene2';
@@ -1288,8 +1287,10 @@ export const storyData: Chapter[] = [
       },
       {
         id: 40,
-        type: 'custom',
-        component: EndChapterScence
+        type: 'dialogue',
+        text: "พระอาทิตย์ขึ้นวันนั้นก็สวยจริงๆนั่นแหละ",
+        backgroundImage: "/images/chapter4/Sunrise.png",
+        isCharacterDialogue: false
       },
     ]
   },
