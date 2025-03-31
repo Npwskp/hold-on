@@ -63,7 +63,7 @@ const DialogueTemplate: React.FC<DialogueTemplateProps> = ({ storyData, chapterI
               </div>
             </div>
           )}
-          <div className={`${chapterId == 4 ? 'text-white' : 'text-black'} text-lg md:text-xl ${storyData.isCharacterDialogue ? '' : 'text-center'} relative z-20`}>
+          <div className={`${chapterId == 4 ? 'text-white' : 'text-black'} text-lg md:text-xl relative z-20`}>
             {storyData.text}
           </div>
         </div>
