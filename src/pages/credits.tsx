@@ -146,18 +146,10 @@ export default function Credits() {
     }
   };
 
-  const progressToPreviousPage = () => {
-    if (currentPageIndex > 0) {
-      setCurrentPageIndex(currentPageIndex - 1);
-    }
-  };
-
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
       if (event.key === 'ArrowRight') {
         progressToNextPage();
-      } else if (event.key === 'ArrowLeft') {
-        progressToPreviousPage();
       }
     };
 
