@@ -60,7 +60,7 @@ function AppContent({ Component, ...props }: AppProps) {
       ],
       chapter5: [
         { type: 'image' as const, url: '/images/chapter5/Lin.gif' },
-        { type: 'video' as const, url: '/images/chapter5/ToBeContinued.mp4' },
+        { type: 'video' as const, url: '/images/chapter5/ToBeContinued.gif' },
         { type: 'image' as const, url: '/images/chapter5/StemCell.gif' },
         { type: 'image' as const, url: '/images/chapter5/TwoHandWithRedRope.gif' },
       ],

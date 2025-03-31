@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Mali } from 'next/font/google';
 import { StoryPage } from '@/types/story';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const mali = Mali({
   subsets: ['thai', 'latin'], 
@@ -54,18 +55,29 @@ const MiddleTextTemplate: React.FC<MiddleTextTemplateProps> = ({ storyData }) =>
   }, [storyData.text, storyData.animation]);
 
   return (
-    <div className={`w-full max-w-[540px] mx-auto min-h-[100dvh] flex flex-col items-center justify-center ${mali.className} text-white text-lg md:text-2xl p-4`}>
-      {displayedText.split('\n').map((line, index) => (
-        <motion.p
-          key={index}
-          className='text-center'
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.1 }}
-        >
-          {line}
-        </motion.p>
-      ))}
+    <div className="w-full max-w-[540px] mx-auto min-h-[100dvh] flex flex-col items-center justify-center relative">
+      {storyData.backgroundImage && (
+        <Image
+          src={storyData.backgroundImage}
+          alt="Background"
+          fill
+          priority={true}
+          className="object-cover z-0 absolute inset-0"
+        />
+      )}
+      <div className={`${mali.className} text-white text-lg md:text-2xl p-4 relative z-10`}>
+        {displayedText.split('\n').map((line, index) => (
+          <motion.p
+            key={index}
+            className='text-center'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.1 }}
+          >
+            {line}
+          </motion.p>
+        ))}
+      </div>
     </div>
   );
 };

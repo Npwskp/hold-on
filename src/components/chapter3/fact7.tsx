@@ -19,7 +19,7 @@ const Fact7 = () => {
         className="object-cover -z-10 absolute inset-0"
       />
       <div className='flex flex-col justify-center gap-4 md:gap-6 text-xl md:text-3xl'>
-        <div className='flex flex-col gap-1 text-6xl md:text-8xl'>
+        <div className='flex flex-col gap-1 text-6xl md:text-8xl text-[#822215]'>
           <b>เลือด</b>
         </div>
         <div className='flex flex-col gap-1 text-lg md:text-2xl'>
