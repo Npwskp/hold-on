@@ -8,7 +8,7 @@ import ChoiceTemplate2 from '@/components/choiceTemplate2';
 import { useSound } from '../hooks/useSound';
 
 export default function StoryGame() {
-  const { gameState, progressToNextPage, progressToPreviousPage, progressTo, selectChoice, clearSelectedChoice } = useGame();
+  const { gameState, progressToNextPage, progressTo, selectChoice, clearSelectedChoice } = useGame();
   const currentPage = getPage(gameState.currentChapter, gameState.currentPage);
   const currentChapter = getChapter(gameState.currentChapter);
 
@@ -22,14 +22,12 @@ export default function StoryGame() {
     const handleKeyPress = (event: KeyboardEvent) => {
       if (event.key === 'ArrowRight' && currentPage?.type !== 'choice') {
         progressToNextPage();
-      } else if (event.key === 'ArrowLeft' && currentPage?.type !== 'choice') {
-        progressToPreviousPage();
       }
     };
 
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [progressToNextPage, progressToPreviousPage, currentPage?.type]);
+  }, [progressToNextPage, currentPage?.type]);
 
   if (!currentPage || !currentChapter) return <div>Story not found</div>;
 
