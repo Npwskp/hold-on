@@ -43,154 +43,153 @@ export const storySounds: StorySoundConfig = {
       loop: true
     },
     2: {
-      bgm: [],
-      sfx: ['/effect/Typing.ogg'],
-      typeingTime: 7200,
-      volume: 0.25,
+      bgm: ['/music/Songkran.mp3'],
+      sfx: [],
+      volume: 0.4,
       loop: true
     },
     3: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     4: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     5: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     6: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     7: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     8: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     9: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     10: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     11: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     12: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     13: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     14: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     15: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     16: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     17: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     18: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     19: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     20: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     21: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     22: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     23: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     24: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     25: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     26: {
       bgm: ['/music/Songkran.mp3'],
       sfx: [],
-      volume: 0.25,
+      volume: 0.4,
       loop: true
     },
     27: {
@@ -290,21 +289,21 @@ export const storySounds: StorySoundConfig = {
       loop: true
     },
     43: {
-      bgm: [],
-      sfx: ['/effect/CarBrakeCrash.ogg'],
+      bgm: ['/music/Love.mp3'],
+      sfx: [],
       volume: 0.25,
       loop: true
     },
     44: {
       bgm: [],
-      sfx: ['/effect/Typing.ogg','/effect/Scream.ogg'],
-      typeingTime: 7000,
+      sfx: ['/effect/CarBrakeCrash.ogg'],
       volume: 0.25,
       loop: true
     },
     45: {
-      bgm: ['/music/Wind.mp3'],
-      sfx: [],
+      bgm: [],
+      sfx: ['/effect/Typing.ogg','/effect/Scream.ogg'],
+      typeingTime: 7000,
       volume: 0.25,
       loop: true
     },
@@ -316,7 +315,7 @@ export const storySounds: StorySoundConfig = {
     },
     47: {
       bgm: ['/music/Wind.mp3'],
-      sfx: ['/effect/EarRinging.ogg'],
+      sfx: [],
       volume: 0.25,
       loop: true
     },
@@ -351,12 +350,18 @@ export const storySounds: StorySoundConfig = {
       loop: true
     },
     53: {
+      bgm: ['/music/Wind.mp3'],
+      sfx: ['/effect/EarRinging.ogg'],
+      volume: 0.25,
+      loop: true
+    },
+    54: {
       bgm: [],
       sfx: ['/effect/Typing.ogg','/effect/HeartMonitor.wav'],
       volume: 0.25,
       loop: true
     },
-    54: {
+    55: {
       bgm: [],
       sfx: ['/effect/HeartMonitor.wav'],
       volume: 0.25,
@@ -527,14 +532,14 @@ export const storySounds: StorySoundConfig = {
       loop: true
     },
     28: {
-      bgm: ['/music/Accident.mp3'],
-      sfx: [],
+      bgm: [],
+      sfx: ['/effect/Typing.ogg'],
       volume: 0.25,
       loop: true
     },
     29: {
       bgm: [],
-      sfx: ['/effect/Typing.ogg'],
+      sfx: [],
       volume: 0.25,
       loop: true
     }

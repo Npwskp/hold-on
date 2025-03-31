@@ -113,11 +113,11 @@ export const storyData: Chapter[] = [
       {
         id: 9,
         type: 'dialogue',
-        text: "ผมยื่นขอเสนอ ทั้งๆที่ผมไม่ชอบจะออกมาข้างนอกในช่วงเทศกาลแบบนี้ มันก็ยังลากผมออกมาจนได้",
+        text: "ผมยื่นข้อเสนอ ทั้งๆที่ผมไม่ชอบจะออกมาข้างนอกในช่วงเทศกาลแบบนี้ มันก็ยังลากผมออกมาจนได้",
         backgroundImage: "/images/chapter1/SongkranSceneCut.png",
         characterImage: "/images/chapter1/Kit3.png",
         characterName: "กิต",
-        isCharacterDialogue: true,
+        isCharacterDialogue: false,
       },
       {
         id: 10,
@@ -155,7 +155,7 @@ export const storyData: Chapter[] = [
         id: 14,
         type: 'dialogue',
         text: "สงสัยเราจะตีความคำว่าความสนุกกันคนแบบแหละ",
-        backgroundImage: "/images/chapter1/SongkranSceneCut.png",
+        backgroundImage: "/images/chapter1/CutScene1.png",
         characterName: "กิต",
         isCharacterDialogue: true
       },
