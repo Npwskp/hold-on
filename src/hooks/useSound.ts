@@ -7,13 +7,16 @@ interface UseSoundProps {
   pageId: number;
 }
 
+// Create a global state to track if we're in the story
+let wasInCredits = false;
+
 export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
   const soundManager = SoundManager.getInstance();
 
   // Use useRef to persist the Map across renders
   const activeSFXKeys = useRef(new Map<string, string>());
 
-  useEffect(() => {    
+  useEffect(() => {
     console.log('Sound effect triggered:', { chapterId, pageId });
     
     // Get sound config for current chapter and page
@@ -57,6 +60,35 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
       }
     };
 
+    // If we were in credits and now we're back in the story, force restart sounds
+    if (wasInCredits && currentPageSound) {
+      console.log('Restarting sounds after returning from credits');
+      soundManager.stopAll();
+      if (currentPageSound.bgm) {
+        currentPageSound.bgm.forEach((bgmSrc, index) => {
+          const key = `bgm_${chapterId}_${pageId}_${index}`;
+          playBGM(key, bgmSrc, currentPageSound.volume || 1, currentPageSound.loop || true);
+        });
+      }
+      if (currentPageSound.sfx) {
+        currentPageSound.sfx.forEach((sfxSrc, index) => {
+          const key = `sfx_${chapterId}_${pageId}_${index}`;
+          if (sfxSrc === '/effect/Typing.ogg') {
+            const typingTime = currentPageSound.typeingTime || 3000;
+            playSFX(key, sfxSrc, currentPageSound.volume || 1, false);
+            setTimeout(() => {
+              soundManager.stopSound(key);
+            }, typingTime);
+          } else {
+            activeSFXKeys.current.set(sfxSrc, key);
+            playSFX(key, sfxSrc, currentPageSound.volume || 1, false);
+          }
+        });
+      }
+      wasInCredits = false;
+      return;
+    }
+
     if (currentPageSound) {
       // Check if the BGM is different from the previous page
       const isSameBGM = previousPageSound?.bgm?.[0] === currentPageSound.bgm?.[0];
@@ -97,10 +129,6 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
           }
         });
       }
-    } else {
-      // If no sound config for this page, stop all sounds
-      console.log('No sound config for page, stopping all sounds');
-      soundManager.stopAll();
     }
 
     // Cleanup function
@@ -125,6 +153,14 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
       }
     };
   }, [chapterId, pageId]);
+
+  // Handle unmounting from the story
+  useEffect(() => {
+    return () => {
+      wasInCredits = true;
+      soundManager.stopAll();
+    };
+  }, []);
 
   return {
     playSound: (key: string) => soundManager.playSound(key),
