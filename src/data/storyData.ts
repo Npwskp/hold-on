@@ -15,6 +15,7 @@ import dynamic from 'next/dynamic';
 import EmergencyScene1 from '@/components/chapter2/emergencyScene1';
 import EmergencyScene2 from '@/components/chapter2/emergencyScene2';
 import EmergencyScene3 from '@/components/chapter2/emergencyScene3';
+import ToBeContinued from '@/components/chapter5/toBeContinued';
 export const storyData: Chapter[] = [
   {
     id: 1,
@@ -1295,8 +1296,8 @@ export const storyData: Chapter[] = [
     pages: [
       {
         id: 1,
-        type: 'dialogue',
-        backgroundImage: "/images/chapter5/ToBeContinued.gif",
+        type: 'custom',
+        component: ToBeContinued
       },
       {
         id: 2,
