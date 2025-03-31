@@ -655,7 +655,7 @@ export const storyData: Chapter[] = [
         id: 16,
         type: 'custom',
         component: Fact2,
-        parentPageId: 13,
+        parentPageId: 12,
       },
       {
         id: 17,
@@ -706,7 +706,7 @@ export const storyData: Chapter[] = [
         id: 22,
         type: 'custom',
         component: Fact3,
-        parentPageId: 13,
+        parentPageId: 12,
       },
       {
         id: 23,

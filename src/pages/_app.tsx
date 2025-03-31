@@ -29,39 +29,22 @@ function AppContent({ Component, ...props }: AppProps) {
 
     const chapterResources: Record<string, Resource[]> = {
       chapter1: [
-        { type: 'image' as const, url: '/images/chapter1/SongkranSceneCut.png' },
         { type: 'video' as const, url: '/images/chapter1/CutScene2.mp4' },
         { type: 'image' as const, url: '/images/chapter1/CutScene4.gif' },
-        { type: 'image' as const, url: '/images/chapter1/CutScene3.png' },
-        { type: 'image' as const, url: '/images/chapter1/CutScene1.png' },
-        { type: 'image' as const, url: '/images/chapter1/SongkranScene.png' },
-        { type: 'image' as const, url: '/images/chapter1/RoadScene.png' },
       ],
       chapter2: [
         { type: 'image' as const, url: '/images/chapter2/EmergencyRoom.png' },
       ],
       chapter3: [
-        { type: 'image' as const, url: '/images/chapter3/PhoneAndHandCrop.png' },
-        { type: 'image' as const, url: '/images/chapter3/Dialogue2.png' },
         { type: 'image' as const, url: '/images/chapter3/CutScene5.gif' },
-        { type: 'image' as const, url: '/images/chapter3/PhoneWithScene.png' },
-        { type: 'image' as const, url: '/images/chapter3/Hallway.png' },
-        { type: 'image' as const, url: '/images/chapter3/MedicalRoom.png' },
-        { type: 'image' as const, url: '/images/chapter3/PhoneAndHand.png' },
       ],
       chapter4: [
-        { type: 'image' as const, url: '/images/chapter4/Sunrise.png' },
         { type: 'video' as const, url: '/images/chapter4/CutScene2.mp4' },
         { type: 'video' as const, url: '/images/chapter4/CutScene1.mp4' },
-        { type: 'image' as const, url: '/images/chapter4/RoadwayBlur.png' },
-        { type: 'image' as const, url: '/images/chapter4/MountainBlur.png' },
-        { type: 'image' as const, url: '/images/chapter4/Roadway.png' },
-        { type: 'image' as const, url: '/images/chapter4/Mountain.png' },
       ],
       chapter5: [
         { type: 'image' as const, url: '/images/chapter5/Lin.gif' },
         { type: 'video' as const, url: '/images/chapter5/ToBeContinued.gif' },
-        { type: 'image' as const, url: '/images/chapter5/StemCell.gif' },
         { type: 'image' as const, url: '/images/chapter5/TwoHandWithRedRope.gif' },
       ],
       audio: [
@@ -72,6 +55,7 @@ function AppContent({ Component, ...props }: AppProps) {
         { type: 'audio' as const, url: '/music/EndingCutScene.mp3' },
         { type: 'audio' as const, url: '/music/Wind.mp3' },
         { type: 'audio' as const, url: '/music/Love.mp3' },
+        { type: 'audio' as const, url: '/effect/Typing.ogg' },
       ],
     };
 
