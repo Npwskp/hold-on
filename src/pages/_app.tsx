@@ -32,21 +32,6 @@ function AppContent({ Component, ...props }: AppProps) {
         { type: 'video' as const, url: '/images/chapter1/CutScene2.mp4' },
         { type: 'image' as const, url: '/images/chapter1/CutScene4.gif' },
       ],
-      chapter2: [
-        { type: 'image' as const, url: '/images/chapter2/EmergencyRoom.png' },
-      ],
-      chapter3: [
-        { type: 'image' as const, url: '/images/chapter3/CutScene5.gif' },
-      ],
-      chapter4: [
-        { type: 'video' as const, url: '/images/chapter4/CutScene2.mp4' },
-        { type: 'video' as const, url: '/images/chapter4/CutScene1.mp4' },
-      ],
-      chapter5: [
-        { type: 'image' as const, url: '/images/chapter5/Lin.gif' },
-        { type: 'video' as const, url: '/images/chapter5/ToBeContinued.gif' },
-        { type: 'image' as const, url: '/images/chapter5/TwoHandWithRedRope.gif' },
-      ],
       audio: [
         { type: 'audio' as const, url: '/music/Songkran.mp3' },
         { type: 'audio' as const, url: '/music/MainMenu.mp3' },
