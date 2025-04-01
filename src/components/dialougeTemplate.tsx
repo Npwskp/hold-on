@@ -29,6 +29,7 @@ const DialogueTemplate: React.FC<DialogueTemplateProps> = ({ storyData, chapterI
             autoPlay
             loop
             playsInline
+            muted={storyData.backgroundImage !== "/images/chapter1/CarCrashScene.mp4"}
             className="object-cover z-0 absolute inset-0 w-full h-full"
           />
         ) : (
