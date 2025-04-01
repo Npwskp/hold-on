@@ -296,7 +296,7 @@ export const storySounds: StorySoundConfig = {
     },
     44: {
       bgm: [],
-      sfx: ['/effect/CarBrakeCrash.ogg'],
+      sfx: [],
       volume: 0.25,
       loop: true
     },

@@ -14,27 +14,36 @@ export default function StoryGame() {
   const currentChapter = getChapter(gameState.currentChapter);
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   const [isToBeContinued, setIsToBeContinued] = useState(false);
+  const [isTimedDialogue, setIsTimedDialogue] = useState(false);
   const { stopSound } = useSound({ 
     chapterId: gameState.currentChapter,
     pageId: gameState.currentPage 
   });
 
   useEffect(() => {
-    // Check if current page is ToBeContinued
-    if (currentPage?.type === 'custom' && currentPage.component === ToBeContinued) {
-      setIsToBeContinued(true);
+    // Handle both ToBeContinued and timed dialogue pages
+    const isToBeContinuedPage = currentPage?.type === 'custom' && currentPage.component === ToBeContinued;
+    const isTimedDialoguePage = currentPage?.type === 'dialogue' && gameState.currentChapter === 2 && gameState.currentPage === 44;
+
+    if (isToBeContinuedPage || isTimedDialoguePage) {
+      setIsToBeContinued(isToBeContinuedPage);
+      setIsTimedDialogue(isTimedDialoguePage);
+      console.log(isToBeContinuedPage, isTimedDialoguePage);
+      
       const timer = setTimeout(() => {
         progressToNextPage();
-      }, 3500);
+      }, isToBeContinuedPage ? 3500 : 5000);
+      
       return () => clearTimeout(timer);
     } else {
       setIsToBeContinued(false);
+      setIsTimedDialogue(false);
     }
-  }, [currentPage, progressToNextPage]);
+  }, [currentPage, gameState.currentChapter, gameState.currentPage, progressToNextPage]);
 
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
-      if (event.key === 'ArrowRight' && currentPage?.type !== 'choice' && !isToBeContinued) {
+      if (event.key === 'ArrowRight' && currentPage?.type !== 'choice' && !isToBeContinued && !isTimedDialogue) {
         if (currentPage?.type === 'middleText' && !isTypingComplete) {
           setIsTypingComplete(true);
           stopSound(`sfx_${gameState.currentChapter}_${gameState.currentPage}_0`);
@@ -46,7 +55,7 @@ export default function StoryGame() {
 
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [progressToNextPage, currentPage?.type, isTypingComplete, gameState.currentChapter, gameState.currentPage, stopSound, isToBeContinued]);
+  }, [progressToNextPage, currentPage?.type, isTypingComplete, gameState.currentChapter, gameState.currentPage, stopSound, isToBeContinued, isTimedDialogue]);
 
   if (!currentPage || !currentChapter) return <div>Story not found</div>;
 
@@ -55,7 +64,7 @@ export default function StoryGame() {
   };
 
   const handlePageClick = () => {
-    if (isToBeContinued) return; // Disable clicks for ToBeContinued page
+    if (isToBeContinued || isTimedDialogue) return; // Disable clicks for ToBeContinued and timed dialogue pages
     
     if (currentPage.type === 'middleText' && !isTypingComplete) {
       setIsTypingComplete(true);
@@ -116,7 +125,7 @@ export default function StoryGame() {
       <div className="absolute inset-0 bg-black -z-10" />
       <div className='w-full h-full max-w-[540px] mx-auto'>
         {currentPage.type !== 'choice' && (
-          <div onClick={handlePageClick} className={isToBeContinued ? 'pointer-events-none' : ''}>
+          <div onClick={handlePageClick} className={isToBeContinued || isTimedDialogue ? 'pointer-events-none' : ''}>
             {renderPageContent()}
           </div>
         )}
