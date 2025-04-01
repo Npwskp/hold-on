@@ -37,7 +37,7 @@ export const storySounds: StorySoundConfig = {
   2: {
     1: {
       bgm: [],
-      sfx: ['/effect/Typing.ogg'],
+      sfx: ['/effect/Typing.wav'],
       typeingTime: 5000,
       volume: 0.25,
       loop: true
@@ -302,7 +302,7 @@ export const storySounds: StorySoundConfig = {
     },
     45: {
       bgm: [],
-      sfx: ['/effect/Typing.ogg','/effect/Scream.ogg'],
+      sfx: ['/effect/Typing.wav','/effect/Scream.ogg'],
       typeingTime: 7000,
       volume: 0.25,
       loop: true
@@ -357,7 +357,7 @@ export const storySounds: StorySoundConfig = {
     },
     54: {
       bgm: [],
-      sfx: ['/effect/Typing.ogg','/effect/HeartMonitor.wav'],
+      sfx: ['/effect/Typing.wav','/effect/HeartMonitor.wav'],
       typeingTime: 3500,
       volume: 0.25,
       loop: true
@@ -534,7 +534,7 @@ export const storySounds: StorySoundConfig = {
     },
     28: {
       bgm: [],
-      sfx: ['/effect/Typing.ogg'],
+      sfx: ['/effect/Typing.wav'],
       volume: 0.25,
       loop: true
     },
@@ -632,21 +632,21 @@ export const storySounds: StorySoundConfig = {
     },
     15: {
       bgm: [],
-      sfx: ['/effect/Typing.ogg'],
+      sfx: ['/effect/Typing.wav'],
       typeingTime: 1500,
       volume: 0.25,
       loop: true
     },
     16: {
       bgm: [],
-      sfx: ['/effect/Typing.ogg'],
+      sfx: ['/effect/Typing.wav'],
       typeingTime: 2000,
       volume: 0.25,
       loop: true
     },
     17: {
       bgm: [],
-      sfx: ['/effect/Typing.ogg'],
+      sfx: ['/effect/Typing.wav'],
       typeingTime: 3000,
       volume: 0.25,
       loop: true

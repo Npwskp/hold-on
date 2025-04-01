@@ -73,7 +73,7 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
       if (currentPageSound.sfx) {
         currentPageSound.sfx.forEach((sfxSrc, index) => {
           const key = `sfx_${chapterId}_${pageId}_${index}`;
-          if (sfxSrc === '/effect/Typing.ogg') {
+          if (sfxSrc === '/effect/Typing.wav') {
             const typingTime = currentPageSound.typeingTime || 3000;
             playSFX(key, sfxSrc, currentPageSound.volume || 1, false);
             setTimeout(() => {
@@ -112,7 +112,7 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
           const key = `sfx_${chapterId}_${pageId}_${index}`;
           
           // Special handling for typing sound - always replay on page change with configured typing time
-          if (sfxSrc === '/effect/Typing.ogg') {
+          if (sfxSrc === '/effect/Typing.wav') {
             const typingTime = currentPageSound.typeingTime || 3000; // Default to 3000ms if not specified
             playSFX(key, sfxSrc, currentPageSound.volume || 1, false);
             // Stop the typing sound after the configured typing time
@@ -145,7 +145,7 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
             }
           }
           
-          if (sfxSrc === '/effect/Typing.ogg') {
+          if (sfxSrc === '/effect/Typing.wav') {
             const key = `sfx_${chapterId}_${pageId}_${index}`;
             soundManager.stopSound(key);
           }

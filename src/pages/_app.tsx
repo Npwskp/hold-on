@@ -40,7 +40,7 @@ function AppContent({ Component, ...props }: AppProps) {
         { type: 'audio' as const, url: '/music/EndingCutScene.mp3' },
         { type: 'audio' as const, url: '/music/Wind.mp3' },
         { type: 'audio' as const, url: '/music/Love.mp3' },
-        { type: 'audio' as const, url: '/effect/Typing.ogg' },
+        { type: 'audio' as const, url: '/effect/Typing.wav' },
       ],
     };
 
