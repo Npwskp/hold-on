@@ -21,7 +21,7 @@ const Fact6 = () => {
         <div className='flex flex-row w-full justify-between items-end text-lg md:text-2xl'>
           <p>ทางศูนย์บริจาคโลหิตแห่งชาติ</p>
           <Image
-            src={"/images/credits/BloodlogoWhite.png"}
+            src={"/images/credits/BloodLogoWhite.png"}
             alt="Background"
             width={150}
             height={150}
