@@ -21,6 +21,9 @@ export default function StoryGame() {
   });
 
   useEffect(() => {
+    // Reset typing completion state when page changes
+    setIsTypingComplete(false);
+
     // Handle both ToBeContinued and timed dialogue pages
     const isToBeContinuedPage = currentPage?.type === 'custom' && currentPage.component === ToBeContinued;
     const isTimedDialoguePage = currentPage?.type === 'dialogue' && gameState.currentChapter === 2 && gameState.currentPage === 44;
@@ -66,10 +69,20 @@ export default function StoryGame() {
   const handlePageClick = () => {
     if (isToBeContinued || isTimedDialogue) return; // Disable clicks for ToBeContinued and timed dialogue pages
     
-    if (currentPage.type === 'middleText' && !isTypingComplete) {
-      setIsTypingComplete(true);
-      stopSound(`sfx_${gameState.currentChapter}_${gameState.currentPage}_0`);
+    if (currentPage.type === 'middleText') {
+      if (!isTypingComplete) {
+        // If typing is not complete, just mark it as complete
+        handleTypingComplete();
+      } else {
+        // Only progress to next page if typing is complete
+        if (currentPage.parentPageId) {
+          progressTo(gameState.currentChapter, currentPage.parentPageId);
+        } else {
+          progressToNextPage();
+        }
+      }
     } else {
+      // For non-middleText pages, progress normally
       if (currentPage.parentPageId) {
         progressTo(gameState.currentChapter, currentPage.parentPageId);
       } else {

@@ -30,15 +30,16 @@ const MiddleTextTemplate: React.FC<MiddleTextTemplateProps> = ({ storyData, onCo
     onComplete?.();
   };
 
-  useEffect(() => {
-    // Cleanup function to clear timeouts and stop sounds
-    const cleanup = () => {
-      if (typewriterTimeout) {
-        clearTimeout(typewriterTimeout);
-      }
-      stopTypingSound?.();
-    };
+  // Cleanup function to clear timeouts and stop sounds
+  const cleanup = () => {
+    if (typewriterTimeout) {
+      clearTimeout(typewriterTimeout);
+    }
+    stopTypingSound?.();
+  };
 
+  useEffect(() => {
+    
     // Reset state for new page
     setDisplayedText('');
     setIsComplete(false);
@@ -88,7 +89,7 @@ const MiddleTextTemplate: React.FC<MiddleTextTemplateProps> = ({ storyData, onCo
 
     typeText();
 
-    return cleanup;
+    return cleanup();
   }, [storyData.id, storyData.text, storyData.animation]);
 
   return (
