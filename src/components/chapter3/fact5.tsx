@@ -28,6 +28,7 @@ const Fact5 = () => {
           <p>เช่น ร่างกายไม่พร้อมบริจาคแต่ฝืนบริจาค</p>
           <p>อาจส่งผลทำให้เลือดที่ได้ไม่มีคุณภาพ</p>
         </div>
+        <p className='text-sm text-center'>World Health Organization ( WHO ) องค์การอนามัยโลก</p>
       </div>
     </div>
   )
