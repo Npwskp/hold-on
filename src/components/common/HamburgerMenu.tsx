@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { HiMenu } from 'react-icons/hi';
 import { useRouter } from 'next/router';
 import { Mali } from 'next/font/google';
+import { useGame } from '@/store/GameContext';
 
 const mali = Mali({
   subsets: ['thai', 'latin'],
@@ -11,6 +12,8 @@ const mali = Mali({
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
+  const { gameState } = useGame();
+  const isEndScene = gameState.currentChapter === 6 && gameState.currentPage === 3;
 
   const toggleMenu = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -46,7 +49,7 @@ const HamburgerMenu = () => {
             className="w-full px-6 py-3 text-white hover:bg-white/10 text-left transition-colors duration-200 text-lg"
             type="button"
           >
-            หน้าหลัก
+            {isEndScene ? 'หน้าสุดท้าย' : 'หน้าหลัก'}
           </button>
           <button
             onClick={(e) => handleNavigate(e, '/credits')}
