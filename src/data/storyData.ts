@@ -417,7 +417,7 @@ export const storyData: Chapter[] = [
       {
         id: 44,
         type: 'dialogue',
-        backgroundImage: "/images/chapter1/KitWithBlood.mp4",
+        backgroundImage: "/images/chapter1/CarCrashScene.mp4",
         characterName: "กิต",
         isCharacterDialogue: false,
         isVideo: true
