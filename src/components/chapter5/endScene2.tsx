@@ -10,13 +10,13 @@ const notoSansThai = Noto_Sans_Thai({
 const EndScene2 = () => {
   return (
     <div 
-      className={`flex flex-col items-center justify-end mx-auto ${notoSansThai.className} text-white bg-black pt-16`}
+      className={`flex flex-col items-center justify-end mx-auto ${notoSansThai.className} text-white bg-black`}
       style={{
         position: 'relative',
-        minHeight: '100vh',
+        minHeight: '100dvh',
+        height: '100vh',
         width: '100%',
-        maxWidth: '540px',
-        aspectRatio: '16/9'
+        maxWidth: '540px'
       }}
     >
       <style jsx>{`
@@ -32,7 +32,7 @@ const EndScene2 = () => {
           className="object-cover z-0 absolute inset-0 w-full h-full"
         />
       <HamburgerMenu />
-      <div className='flex flex-col justify-center gap-4 md:gap-6 max-w-[800px] px-4 h-full mt-16 md:mt-20 z-10'>
+      <div className='flex flex-col justify-center gap-4 md:gap-6 max-w-[800px] px-4 h-full mt-20 md:mt-24 z-10'>
         <div className='flex flex-col gap-1 text-center text-xs md:text-sm w-[90vw] md:w-[400px]'>
             <p>ร่วมเป็นผู้บริจาคเลือด กับศูนย์บริการโลหิตแห่งชาติ สภากาชาดไทย </p>
             <p>เพื่อสร้างโอกาสและความหวังให้แก่ผู้ที่กำลังรอคอยการรักษาเช่นเดียวกับลิน
