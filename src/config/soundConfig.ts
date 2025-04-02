@@ -780,115 +780,115 @@ export const storySounds: StorySoundConfig = {
       loop: true
     },
     22: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     23: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     24: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     25: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     26: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     27: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     28: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     29: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     30: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     31: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     32: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     33: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     34: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     35: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     36: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     37: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     38: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     39: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     40: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
@@ -896,19 +896,19 @@ export const storySounds: StorySoundConfig = {
   },
   6: {
     1: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     2: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
     },
     3: {
-      bgm: ['/music/Love.mp3'],
+      bgm: ['/music/Ending.mp3'],
       sfx: [],
       volume: 0.25,
       loop: true
