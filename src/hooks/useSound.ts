@@ -23,11 +23,21 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
     const chapterSounds = storySounds[chapterId];
     const currentPageSound = chapterSounds?.[pageId];
     const previousPageSound = chapterSounds?.[pageId - 1];
-    const nextPageSound = chapterSounds?.[pageId + 1] || storySounds[chapterId + 1]?.[0];
+    
+    // Get next page sound, checking both within chapter and next chapter
+    const nextPageInChapter = chapterSounds?.[pageId + 1];
+    const nextChapterFirstPage = storySounds[chapterId + 1]?.[1];
+    const nextPageSound = nextPageInChapter || nextChapterFirstPage;
 
-    // Stop all sounds when changing chapters
-    if (!chapterSounds) {
-      console.log('No sound config for chapter, stopping all sounds')
+    // Check for previous chapter's last page when on first page of current chapter
+    const previousChapterLastPageId = pageId === 1 ? 
+      Object.keys(storySounds[chapterId - 1] || {}).length : 0;
+    const previousChapterLastPage = pageId === 1 ? 
+      storySounds[chapterId - 1]?.[previousChapterLastPageId] : null;
+
+    // Don't stop all sounds immediately if changing chapters
+    if (!chapterSounds && !previousChapterLastPage) {
+      console.log('No sound config for chapter and no previous chapter, stopping all sounds')
       soundManager.stopAll();
       return;
     }
@@ -41,7 +51,6 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
       } catch (error) {
         if (error instanceof Error) {
           console.warn('Failed to play BGM:', error);
-          // The Sound class will now handle retrying after user interaction
         }
       }
     };
@@ -55,7 +64,6 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
       } catch (error) {
         if (error instanceof Error) {
           console.warn('Failed to play SFX:', error);
-          // The Sound class will now handle retrying after user interaction
         }
       }
     };
@@ -90,10 +98,11 @@ export const useSound = ({ chapterId, pageId }: UseSoundProps) => {
     }
 
     if (currentPageSound) {
-      // Check if the BGM is different from the previous page
-      const isSameBGM = previousPageSound?.bgm?.[0] === currentPageSound.bgm?.[0];
+      // Check if the BGM is different from the previous page or previous chapter's last page
+      const previousBGM = previousPageSound?.bgm?.[0] || previousChapterLastPage?.bgm?.[0];
+      const isSameBGM = previousBGM === currentPageSound.bgm?.[0];
 
-      // Load and play background music only if it's different from previous page
+      // Load and play background music only if it's different from previous
       if (currentPageSound.bgm && !isSameBGM) {
         currentPageSound.bgm.forEach((bgmSrc, index) => {
           const key = `bgm_${chapterId}_${pageId}_${index}`;
