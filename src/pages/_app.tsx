@@ -4,6 +4,7 @@ import Head from "next/head";
 import { GameProvider, useGame } from '../store/GameContext';
 import { useState, useEffect } from 'react';
 import { preloadResources, type Resource } from '@/utils/resourcePreloader';
+import { Analytics } from "@vercel/analytics/next";
 import LoadingScreen from '@/components/LoadingScreen';
 
 // Wrapper component to access context
