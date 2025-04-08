@@ -69,6 +69,7 @@ function AppContent({ Component, ...props }: AppProps) {
 
   return (
     <>
+      <Analytics/>
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/images/Main_Character.png" />
