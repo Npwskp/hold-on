@@ -1,11 +1,11 @@
-# ❤️ Blood Donation Awareness Web Game (รอก่อนนะ)
+# Blood Donation Awareness Web Game (รอก่อนนะ)
 
-🎮 *An interactive story-driven game to raise awareness about the importance of blood donation.*
+*An interactive story-driven game to raise awareness about the importance of blood donation.*
 
 > 🔊 **This game is currently available in Thai language only.**  
 > 📱 **Fully responsive and optimized for all devices – mobile, tablet, and desktop.**
 
-🧠 Created in collaboration with:
+Created in collaboration with:
 - **Health Communication Program, COSCI SWU**
 - **Thai Red Cross Society – National Blood Centre**
 
