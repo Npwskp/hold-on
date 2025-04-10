@@ -1,6 +1,9 @@
 # ❤️ Blood Donation Awareness Web Game
 
-An interactive story-driven web game designed to raise awareness about the importance of blood donation.
+🎮 *An interactive story-driven game to raise awareness about the importance of blood donation.*
+
+> 🔊 **This game is currently available in Thai language only.**  
+> 📱 **Fully responsive and optimized for all devices – mobile, tablet, and desktop.**
 
 🧠 Created in collaboration with:
 - **Health Communication Program, COSCI SWU**
@@ -14,6 +17,11 @@ This story-based game puts players in the shoes of characters making life-changi
 - Break common myths about blood donation
 - Encourage youth to become regular donors
 - Share real-world impacts through storytelling
+
+<p align="center">
+  <img src="./public/screenshot/hold-on-Screenshot1.jpg" alt="Home Screen" width="40%" style="margin-right: 10px;" />
+  <img src="./public/screenshot/hold-on-Screenshot2.jpg" alt="Gameplay" width="40%" />
+</p>
 
 ---
 
