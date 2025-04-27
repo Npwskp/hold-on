@@ -124,13 +124,13 @@ const SecondCreditPage = () => (
         </div>
       </div>
 
-      <p className='text-center mt-4 font-bold'>
+      <p className='text-center mt-4 mb-4 font-bold'>
         ขอบคุณหน่วยงานที่ให้ความอนุเคราะห์ข้อมูล
       </p>
       <div className='flex flex-row justify-center items-center gap-4 md:gap-8'>
         <Image src={"/images/credits/LogoCosci.png"} alt="Blood Logo" width={100} height={100} />
-        <Image src={"/images/credits/HealthCommuEng.png"} alt="Blood Logo" width={100} height={100} />
-        <Image src={"/images/credits/BloodLogoWithText.png"} alt="Blood Logo" width={100} height={100} />
+        <Image src={"/images/credits/HealthCommuEng.png"} alt="Blood Logo" width={90} height={90} />
+        <Image src={"/images/credits/CreditsBloodLogo.png"} alt="Blood Logo" width={130} height={130} />
       </div>
       <p className="text-center mt-4">
         ขอขอบคุณทีมงานทุกท่านที่มีส่วนร่วมในผลงานนี้

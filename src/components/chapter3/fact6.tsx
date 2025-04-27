@@ -20,14 +20,6 @@ const Fact6 = () => {
       <div className='flex flex-col justify-center gap-4 md:gap-6 px-8 md:px-12 mb-20 md:mb-28'>
         <div className='flex flex-row w-full justify-between items-end text-lg md:text-2xl'>
           <p>ทางศูนย์บริจาคโลหิตแห่งชาติ</p>
-          <Image
-            src={"/images/credits/BloodLogoWhite.png"}
-            alt="Background"
-            width={150}
-            height={150}
-            priority={true}
-            className="object-cover w-[50px] md:w-[100px] aspect-[2/3] me-4"
-          />
         </div>
         <div className='flex flex-col gap-1 border-l-2 pl-4 md:pl-8 text-2xl md:text-3xl max-w-[320px] md:max-w-[540px]'>
           <b>ได้มีการกำหนดคุณสมบัติ</b>
